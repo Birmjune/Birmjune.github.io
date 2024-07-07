@@ -18,3 +18,5 @@ sidebar-category:
         url: "/math"
       - title: "Computer Science"
         url:  "/CS"
+      - title: "Other"
+        url:  "/Other"
