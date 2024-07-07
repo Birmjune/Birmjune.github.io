@@ -16,7 +16,7 @@ sidebar-category:
     children:
       - title: "Math"
         url: "/math"
-      - title: "Computer Science"
+      - title: "CS"
         url:  "/CS"
       - title: "Other"
         url:  "/Other"
