@@ -113,9 +113,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "What is my name?"
+  name             : "Birmjune Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "SNU CSE"
+  bio              : "CSE student in Korea"
   location         : "Korea"
   email            : "johnbie0627@gmail.com"
   links:
