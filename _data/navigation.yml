@@ -10,3 +10,11 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+sidebar-category:
+  - title: "Category"
+    children:
+      - title: "Math"
+        url: "/math"
+      - title: "Computer Science"
+        url:  "/CS"
