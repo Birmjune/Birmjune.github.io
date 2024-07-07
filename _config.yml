@@ -21,7 +21,7 @@ title                    : "Just a CS student"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "IDK"
-description              : "An amazing website."
+description              : "Studying."
 url                      : "https://Birmjune.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
