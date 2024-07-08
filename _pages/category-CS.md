@@ -7,8 +7,6 @@ sidebar:
   nav: sidebar-category
 ---
 
-<h1 class="page__title">{{ page.title }}</h1>
-
 {% assign posts = site.categories.CS %}
 <p>{{ posts.size }} posts in this category</p>
 
