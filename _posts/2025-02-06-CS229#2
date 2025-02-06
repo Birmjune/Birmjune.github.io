@@ -1,0 +1,30 @@
+---
+title: Lecture 2 (CS229)
+date: 2025-02-06 08:00:00 +09:00
+categories:
+  - ML
+  - CS
+tags:
+use_math: true
+---
+
+This is the second lecture of the CS229 class. The second lecture covers linear regression, Gradient descent, and normal equation.
+
+In ML, by using the training set $X, y$, the learning algorithm creates an hypothesis $h$ which predicts values for new $X$. Linear regression is an algorithm which $h$ is linear, as we can write as $\theta ^T X$.
+
+For the notation, we use $(X, y)$ as the training example. For one example, we use the superscript as $X^{(i)}, y^{(i)}$. We set $m$ as the # of training examples, and $n$ as the # of features. (So, $h_{\theta}(X) = \theta_0 + .... + \theta_n X_n = \theta ^{T}X$  and $X_0 = 1$)
+
+Naturally, we try to choose $\theta$ as $h(X)\sim y$ for training set. 
+More mathematically, we minimize the cost function, $J(\theta) = 1/2 * \sum_{i}(h_\theta(X^{(i)}) - y^{(i)})^2$ 
+(The reason for using squares will be shown at next post)
+
+We minimize it by using gradient descent.
+This algorithm uses the fact that in a function, the most decreasing direction is the gradient. By using learning rate $\alpha$, we update as (need to add)
+
+If we do this by summing the gradient for all training set, this is called Batch GD. On the other side, using gradient of one training example is called Stochastic GD. Stochastic GD is good when there are a lot of data in the training set (large $m$) Usually used themes are Stochastic GD + decreasing $\alpha$ OR Batch GD for small $m$.
+
+Normal equation is a way to explicitly solve linear regression problems. 
+By using the fact that when $J(\theta)$ is maximized, the gradient is 0, we can make an equation.
+The equation will be $X^T X\theta = X^T y$, and $\theta = (X^T X)^{-1}X^T y$.
+
+Maybe, if not invertible, we can check if we use dependent features. (ex; reputating a feature.)
