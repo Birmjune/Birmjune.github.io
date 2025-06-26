@@ -234,5 +234,5 @@ jekyll-archives:
 params:
   list:
     sort:
-      - "Weight"
+      - "weight"
       - "-Date"
