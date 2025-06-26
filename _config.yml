@@ -230,3 +230,9 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+params:
+  list:
+    sort:
+      - "Weight"
+      - "-Date"
