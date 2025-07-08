@@ -4,6 +4,7 @@ date: 2025-02-02 16:35:00 +09:00
 categories: []
 tags: []
 pin: 'true'
+layout: home   
 ---
 I am a Computer Science major studying in South Korea.
 
