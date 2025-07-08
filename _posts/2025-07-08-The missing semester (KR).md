@@ -5,6 +5,7 @@ categories:
   - Etc
 tags: []       
 math: true
+layout: home
 ---
 
 최근에 여러 프로젝트를 하면서, 이론도 중요하지만.. 실제로 사용되는 여러 tool을 익히는 것이 중요하다는 생각이 들었다.
