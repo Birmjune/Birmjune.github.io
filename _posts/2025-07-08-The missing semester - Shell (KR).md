@@ -10,7 +10,9 @@ layout: home
 
 최근에 여러 프로젝트를 하면서, 이론도 중요하지만.. 실제로 사용되는 여러 tool을 익히는 것이 중요하다는 생각이 들었다.               
 그러한 의미에서 Docker? Conda? Git? Vim? Terminal? 이런 것들을 정리해보려고 한다.                      
-MIT의 missing semester 강좌와 웹서핑으로 얻은 정보를 정리할 것이다. (https://missing.csail.mit.edu/)                 
+MIT의 missing semester 강좌와 웹서핑으로 얻은 정보를 정리할 것이다. (https://missing.csail.mit.edu/)        
+
+이번 post에서는 Shell에 대해 정리한다.
 
 ### What is the shell?
 Shell이란? 요즘 컴퓨터들은 fancy한 graphic interface들을 제공하나, 이런 것들은 할 수 있는 작업의 범위를 제한함. 컴퓨터의 모든 기능을 활용하기 위해서는 Shell이라고 하는 textual interface를 사용해야 한다.                 
