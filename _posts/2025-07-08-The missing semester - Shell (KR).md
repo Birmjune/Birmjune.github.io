@@ -1,11 +1,11 @@
 ---
 title: The missing semester - Shell (KR)
 date: 2025-07-08 08:00:00 +09:00
-categories:
-  - Etc
+categories: [Etc]
 tags: []       
 math: true
 layout: home
+author: birm
 ---
 
 최근에 여러 프로젝트를 하면서, 이론도 중요하지만.. 실제로 사용되는 여러 tool을 익히는 것이 중요하다는 생각이 들었다.               
