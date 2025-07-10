@@ -1,8 +1,7 @@
 ---
 title: ML Study Targets
 date: 2025-02-02 16:35:00 +09:00
-categories:
-  - ML
+categories: [ML]
 tags:
 layout: home   
 ---
