@@ -4,7 +4,7 @@ date: 2025-07-08 08:00:00 +09:00
 categories: [Etc]
 tags: []       
 math: true
-layout: home
+layout: post
 author: birm
 ---
 
