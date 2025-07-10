@@ -3,7 +3,6 @@ title: About me (and this website)
 date: 2025-02-02 16:35:00 +09:00
 categories: 
   - Etc
-author: 'Birmjune'
 pin: 'true'
 layout: home   
 ---
