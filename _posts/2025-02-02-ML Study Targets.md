@@ -3,7 +3,7 @@ title: ML Study Targets
 date: 2025-02-02 16:35:00 +09:00
 categories: [ML]
 tags:
-layout: home   
+layout: post 
 author: birm
 ---
 In this website, my first goal is to keep track of my machine learning study.
