@@ -60,7 +60,7 @@ Window의 경우는 \으로 구분, C:\ 혹은 D:\와 같은 각 disk가 최상�
 
 **cp**: 파일이나 디렉터리를 복사
 - ex) `$ cp file.txt copy.txt` → 파일 복사
-- 디렉터리 전체 복사 시 -r 옵션 사용: `$ cp -r src_dir/ dst_dir/`
+- 디렉터리 전체 복사 시 -r 옵션 사용: ex) `$ cp -r src_dir/ dst_dir/`
 
 **mkdir**: 새로운 dir 생성. ex) `$ mkdir project` → project 디렉터리 생성          
 ### Connecting Programs
@@ -76,7 +76,8 @@ ex) `ls -l / | tail -n1` : / (root dir) 의 내용을 나열한 뒤, 마지막 1
 ### sudo
 "root" 사용자만 할 수 있는 작업들이 있음. 이는 sudo (super user do) 를 앞에 붙여 실행해야 한다! root 권한으로 프로그램을 실행하겠다~ 이런 뜻.
 
-단, `|`, `>`, `<` 등의 명령은 program이 아니라 shell이 하기에 root 권한이 없음에 유의해야 한다. 즉 `$ sudo echo 3 > brightness` 는 안 된다. (brightness가 sudo 권한 필요할 때)
+단, `|`, `>`, `<` 등의 명령은 program이 아니라 shell이 하기에 root 권한이 없음에 유의해야 한다.            
+즉 `$ sudo echo 3 > brightness` 는 안 된다. (brightness가 sudo 권한 필요할 때)            
 `$ echo 3 | sudo tee brightness` 와 같이 실행하여, `tee` program을 root 권한으로 실행하는 방식을 사용해야 한다!
 
 
