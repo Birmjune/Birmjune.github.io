@@ -1,5 +1,5 @@
 ---
-title: The missing semester - Shell (KR)
+title: CS Tools - Shell (KR)
 date: 2025-07-08 08:00:00 +09:00
 categories: [Etc]
 tags: []       
@@ -9,8 +9,10 @@ author: birm
 ---
 
 최근에 여러 프로젝트를 하면서, 이론도 중요하지만.. 실제로 사용되는 여러 tool을 익히는 것이 중요하다는 생각이 들었다.               
-그러한 의미에서 Docker? Conda? Git? Vim? Terminal? 이런 것들을 정리해보려고 한다.                      
-MIT의 missing semester 강좌와 웹서핑으로 얻은 정보를 정리할 것이다. (https://missing.csail.mit.edu/)        
+그러한 의미에서 Docker? Conda? Git? Vim? Terminal? 이런 여러 가지 tool들을 정리해보려고 한다.                      
+
+MIT의 missing semester 강좌의 내용과 추가적으로 궁금한 부분들에 대해 웹서핑으로 얻은 정보를 정리할 것이다.
+(Link: [Missing semenster](https://missing.csail.mit.edu/))     
 
 이번 post에서는 Shell에 대해 정리한다.
 
