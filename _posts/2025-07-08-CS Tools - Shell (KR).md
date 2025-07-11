@@ -42,16 +42,15 @@ Window의 경우는 \으로 구분, C:\ 혹은 D:\와 같은 각 disk가 최상�
 ### Basic Commands
 **(기본적인 것들)**
 
-**echo**: shell에 내용을 출력. (`$ echo hello`)
-**cat**: 파일의 내용을 화면에 출력하거나, 여러 파일을 이어 붙여서 출력 (`$ cat a.txt b.txt > ab.txt`)
-**man**: 명령어의 매뉴얼 페이지를 보여줌. ex) `$ man ls` → ls 명령의 사용법과 옵션 설명 확인
-**grep**: global regular expression print, 파일/입력에서 특정 문자열과 일치하는 부분 찾기. ex) `$ grep 'error' logfile.txt` → logfile.txt에서 'error' 있는 부분 모두 찾음
+**echo**: shell에 내용을 출력. (`$ echo hello`)          
+**cat**: 파일의 내용을 화면에 출력하거나, 여러 파일을 이어 붙여서 출력 (`$ cat a.txt b.txt > ab.txt`)               
+**man**: 명령어의 매뉴얼 페이지를 보여줌. ex) `$ man ls` → ls 명령의 사용법과 옵션 설명 확인           
+**grep**: global regular expression print, 파일/입력에서 특정 문자열과 일치하는 부분 찾기. ex) `$ grep 'error' logfile.txt` → logfile.txt에서 'error' 있는 부분 모두 찾음             
 
 **(File 관련)**
 **pwd**: print working directory, 현재 디렉터리 경로 표시 (`$ pwd`)
 **cd:** change directory, 디렉터리를 이동. `..` 은 상위 디렉터리, `.`은 현재 디렉터리.
-- ex) /home에서 `$ cd missing` → /home/missing으로 이동
-
+- ex) /home에서 `$ cd missing` → /home/missing으로 이동          
 **ls**: 현재 디렉터리의 파일·디렉터리 목록 표시
 - **ls -l**: 목록을 권한(rwx), 소유자, 크기, 수정 날짜 등 자세히 표시
 
