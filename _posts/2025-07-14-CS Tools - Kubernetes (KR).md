@@ -4,9 +4,9 @@
 크게 보자면, CPU/GPU 사용하겠다는 요청을 보내면 알아서 실행 후 그 결과를 다시 전달하는 형태이다. 이를 통해 컴퓨팅 자원을 할당받을 수 있다.
 Pod 형태로 실행하며, 실행이 끝나면 남아있는 데이터는 삭제됨. 
 
-실제로 자원 사용 시, **Pod**와 **PVC** 사용한다:
-**Pod**는 실행 엔진, 연산 자원 빌려 쓰는 1회성 단위 (Like Google Colab)
-**PVC**는 계속 남아서 데이터를 보존하는 것. (Like Google Drive)
+실제로 자원 사용 시, **Pod**와 **PVC** 사용한다:                       
+**Pod**는 실행 엔진, 연산 자원 빌려 쓰는 1회성 단위 (Like Google Colab)                      
+**PVC**는 계속 남아서 데이터를 보존하는 것. (Like Google Drive)               
 즉 Pod로 실행하는 과정에서 PVC에 .pt 등 파일을 저장하게끔 하는 식으로 자원 유지 가능!
 ### Way to use
 실제로 사용하는 방법은 [SGS](https://sgs-docs.snucse.org) 를 참고하면 되는데, 먼저 docker와 kubectl, kubelogin 등의 tool을 깔아야 한다. (나는 WSL로 쉽게 깔았음.) 
