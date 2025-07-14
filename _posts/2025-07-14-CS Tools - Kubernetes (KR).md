@@ -1,3 +1,13 @@
+---
+title: CS Tools - Kubernetes (KR)
+date: 2025-07-14 08:00:00 +09:00
+categories: [Etc]
+tags: []       
+math: true
+layout: post
+author: birm
+---
+
 ## Kubernetes
 학교에서 GPU 대여 서비스를 신청해 보니, Kubernetes (이하 Kube) 라는 tool을 사용하라고 하여 겸사겸사 Kube + 대여받은 GPU 사용법에 대해서도 정리해 보기로 했다.
 ### Outline
