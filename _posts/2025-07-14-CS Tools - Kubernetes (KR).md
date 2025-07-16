@@ -53,5 +53,12 @@ spec:
 - GPU shell에서 debug 완료된 코드를 실제로 실행하는 단계 (최종 프로그램 실행)
 - 코드 실행이 완료되면 자동으로 종료됨.
 
+참고로, 뭔가 오류가 날 때는 (잘 안 될 때는)                  
+`kubectl logs <workload-name> -c app` 을 통해 log를 확인 후 어디서 문제가 생겼는지 확인할 수 있다!
+
 ### Using GPU via Colab
-Colab의 환경에서 local GPU로 활용할 수도 있다!
+Colab의 환경에서 local GPU로 활용할 수도 있다!                   
+Jupyter의 기본 8888번 port로 expose 한 다음, `kubectl port-forward` 명령어 실행 후 Colab에서 local runtime 설정하면 됨.                
+interactive하게 쓸 수 있다는 것이 장점이다.                
+
+VSCode의 Kubernetes + Dev Containers Extension을 쓰면 VSC에서도 할 수 있는 것 같은데 잘 모르겠다.
