@@ -53,8 +53,11 @@ spec:
 - GPU shell에서 debug 완료된 코드를 실제로 실행하는 단계 (최종 프로그램 실행)
 - 코드 실행이 완료되면 자동으로 종료됨.
 
-참고로, 뭔가 오류가 날 때는 (잘 안 될 때는)                  
-`kubectl logs <workload-name> -c app` 을 통해 log를 확인 후 어디서 문제가 생겼는지 확인할 수 있다!
+**kubectl commands**           
+`kubectl logs <workload-name> -c app` : log 확인 후 문제 발생 위치 확인           
+`kubectl get pods -o wide ` : 현재 내 pod의 상태 확인 (Name, Ready 유무, status 등등..)           
+`kubectl describe pod gpu-jupyter-workload` : 현재 내 pod의 더 자세한 정보 확인             
+
 
 ### Using GPU via Colab
 Colab의 환경에서 local GPU로 활용할 수도 있다!                   
