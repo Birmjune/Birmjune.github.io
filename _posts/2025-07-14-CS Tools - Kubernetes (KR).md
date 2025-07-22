@@ -22,9 +22,9 @@ Pod 형태로 실행하며, 실행이 끝나면 남아있는 데이터는 삭제
 실제로 사용하는 방법은 [SGS](https://sgs-docs.snucse.org) 를 참고하면 되는데, 먼저 docker와 kubectl, kubelogin 등의 tool을 깔아야 한다. (나는 WSL로 쉽게 깔았음.) 
 
 추천하는 GPU 사용하는 방법은 아래와 같음. (Recommended Workflow)
-- 1. 코드 수정용 Working pod (GPU 없이) 를 만든다
-- 2. GPU shell에서 코드가 제대로 돌아가는지 확인한다
-- 3. GPU workload를 활용해 코드를 한번에 쭉 돌린다
+- a. 코드 수정용 Working pod (GPU 없이) 를 만든다
+- b. GPU shell에서 코드가 제대로 돌아가는지 확인한다
+- c. GPU workload를 활용해 코드를 한번에 쭉 돌린다
 
 실제로 위 과정을 진행하기 위해, 아래와 같은 설정을 진행해야 한다.
 
@@ -56,7 +56,7 @@ spec:
 **kubectl commands**           
 `kubectl logs <workload-name> -c app` : log 확인 후 문제 발생 위치 확인           
 `kubectl get pods -o wide ` : 현재 내 pod의 상태 확인 (Name, Ready 유무, status 등등..)           
-`kubectl describe pod gpu-jupyter-workload` : 현재 내 pod의 더 자세한 정보 확인             
+`kubectl describe pod <pod-name>` : 현재 내 pod의 더 자세한 정보 확인             
 
 
 ### Using GPU via Colab
