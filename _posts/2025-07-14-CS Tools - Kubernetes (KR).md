@@ -1,5 +1,5 @@
 ---
-title: [CS Tools] Kubernetes (KR)
+title: <CS Tools> Kubernetes (KR)
 date: 2025-07-14 08:00:00 +09:00
 categories: [Etc]
 tags: []       
