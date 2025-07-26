@@ -1,5 +1,5 @@
 ---
-title: CS Tools - Shell (KR)
+title: [CS Tools] Shell (KR)
 date: 2025-07-08 08:00:00 +09:00
 categories: [Etc]
 tags: []       
