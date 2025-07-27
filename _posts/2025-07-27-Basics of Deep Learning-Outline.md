@@ -1,5 +1,12 @@
-
-
+---
+title: "[Basics of Deep Learning] Outline"
+date: 2025-07-27 08:00:00 +09:00
+categories: [Etc]
+tags: [ML, Deep Learning]       
+math: true
+layout: post
+author: birm
+---
 
 This post outlines the course _Basics of Deep Learning (SNU, Spring 2025)_. Specific content for each lecture will be added incrementally.
 # Course Content
