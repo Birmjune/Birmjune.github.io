@@ -1,8 +1,8 @@
 ---
 title: "[Basics of Deep Learning] Outline"
 date: 2025-07-27 08:00:00 +09:00
-categories: [Etc]
-tags: [ML, Deep Learning]       
+categories: [ML, Deep Learning] 
+tags: []     
 math: true
 layout: post
 author: birm
