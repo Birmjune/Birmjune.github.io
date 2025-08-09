@@ -27,7 +27,7 @@ $$
 **MLE: Maximum likeliood estimation**, which is a natural idea for choosing weights which is to maximize the log-likelihood, defined as
 
 $$
-l(\theta) = log(L(\theta)) = log(p(\vec{y}|x; \theta))
+l(\theta) = log(L(\theta)) = log(p(\vec{y}|x; \theta ))
 $$           
 
 **Logistic Regression** using LR. We set the model as $h(x) = g(\theta^T x)$ when $g$ is the sigmoid function.            
@@ -36,7 +36,7 @@ Basic **perceptrons**, which is a classifier using the **sign of $\theta^T x$.**
 **Exponential family,** which is a **PDF** which has the form defined as:               
 
 $$
-P(y\,;\eta) = b(y)exp[\eta^TT(y)-a(\eta)]
+P(y\,;\eta) = b(y) exp[\eta^TT(y)-a(\eta)]
 $$
 
 $\eta$, $T(y)$, $b(y)$, $a(\eta)$ is called as the Natural parameter, sufficient statistic, Base measure, and Log-partition.             
