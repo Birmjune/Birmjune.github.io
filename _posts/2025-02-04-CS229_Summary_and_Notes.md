@@ -51,14 +51,14 @@ We assume that,
 (3) $h(x) = \mathbb{E} [y|x ;\theta ]$ (output for test time)           
 In real usage, we use $\mathbb{E}[y ;\eta ] = \mu$ which is the canonical response function.           
 ## Lecture 5         
-Until now, we learned discriminative models (Which learns $p(y|x)$)         
-From now, we deal with basic Generative models (Which learns $p(x|y)$)        
+Until now, we learned discriminative models (Which learns $p(y|x)$ )         
+From now, we deal with basic Generative models (Which learns $p(x|y)$ )        
       
 **GDA** (Gaussian Discriminant Analysis). For a binary classifier, we model $p(x|y=0)$ and $p(x|y=1)$ as multivariate gaussian.        
 We calculate the Joint Likelihood, and use MLE.         
       
 **Naive Bayes** method, which is similar and can be used for spam mail classification.         
-For the word list and given data, we calculate $p(x_j = 1 | y = 1)$, which is the prob of the $j$th word in the mail given the mail is spam (or not).       
+For the word list and given data, we calculate $p(x_j = 1 | y = 1)$, which is the prob of the $j$ th word in the mail given the mail is spam (or not).       
 We can use methods as **Laplace Smoothing** to make accurate assumptions.       
 ## Lecture 6        
 **SVM** (Support Vector Machines), which is a method that we map data to higher dimensions, in order to get better classification.
@@ -68,10 +68,10 @@ Then we choose $w, b$ to maximize the margin $\gamma$.
 It can be rewrited as       
 
 $$
-\min_{w,b} ||w||^2   \,\, (s.t. y^{(i)}(w^Tx^{(i)}+b) \geq 1)
+\min_{w,b} |w|^2  (s.t. y^{(i)}(w^Tx^{(i)}+b) \geq 1)
 $$
 
-The superscript $(i)$ denotes the $i$'th data.        
+The superscript $(i)$ denotes the $i$ th data.        
 ## Lecture 7
 **Derivation of SVM**.               
 By representation theorem, the optimal $w$ at Lec 6 can be written as:
@@ -80,18 +80,19 @@ $$
 w = \sum_{i}\alpha_i y^{(i)}x^{(i)}
 $$
 
-So, to minimize $||w||^2$, we need inner products (i.e. $<w_i, w_j>$)          
+So, to minimize $|w|^2$, we need inner products (i.e. $<w_i, w_j>$ )          
 We use a map (called kernel) $\phi(x)$, which makes fast inner product.        
-(Fast caluclation for $\phi(x)^T \phi(z)$, and fast transform to $x^Tz$.)    
+(Fast caluclation for $\phi(x)^T \phi(z)$, and fast transform to $x^Tz$ .)    
 
 ## Lecture 8
 Basic ideas about **Learning Theory.**           
-It talks about bias/variance and over/underfitting, then talks about regularization and the 2 views of ML (Frequentist, Baeysian : Maybe supervised learning?)          
-Finally talks about the ways used to train models. (Making train, dev, test set and doing cross validation + K-Fold validation)          
+It talks about **bias/variance and over/underfitting**, then talks about **regularization** and the 2 views of ML (Frequentist, Baeysian : Maybe supervised learning?)          
+Finally talks about the ways used to train models. (Making **train, dev, test set** and doing **cross validation** + **K-Fold** validation)          
 
 ## Lecture 9
 **Learning Theory** continued.          
-Parameter view of bias/variance, and decomposing error to var, bias, and irreducible error. Methods to deal high var/bias and **var/bias tradeoff.**            
+**Parameter view of bias/variance**, and **decomposing error** to var, bias, and irreducible error.          
+Methods to deal high var/bias and **var/bias tradeoff.**                  
 **ERM** and about the bounds between ERM and theortical best values. (about prob of error $\delta$, margin of error $\gamma$, sample size $m$, $|H| = K$ for finite or VC dim..)           
 
 Think) Bias-Variance is actually a hard concept to understand exactly.. only get the feelings          
