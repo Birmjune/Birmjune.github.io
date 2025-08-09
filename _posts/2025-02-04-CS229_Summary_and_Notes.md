@@ -17,9 +17,11 @@ The details for the mathematical derivation can be found in the lecture notes (w
 **Linear Regression.** We estimate as, $h(x) = \theta^T x$, and minimize MSE loss. We solve this by Gradient descent, or solving the normal equation.
 
 **Gradient descent:** We update weights by plugging as:
+
 $$
 \theta \leftarrow \theta - \eta \frac{\partial}{\partial \theta}l(\theta) 
 $$
+
 ## Lecture 3
 **Locally weighted LR**. LR with weights.            
 **MLE: Maximum likeliood estimation**, which is a natural idea for choosing weights which is to maximize the log-likelihood, defined as
