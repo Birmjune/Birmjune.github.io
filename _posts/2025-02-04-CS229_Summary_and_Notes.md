@@ -49,7 +49,7 @@ We assume that,
 (1) $y$ | $x\,;\theta$ ~ ExponentialFamily $(\eta)$        
 (2) $\eta = \theta^T x$         
 (3) $h(x) = \mathbb{E} [y|x ;\theta ]$ (output for test time)           
-In real usage, we use $E[y ;\eta ] = \mu$ which is the canonical response function.           
+In real usage, we use $\mathbb{E}[y ;\eta ] = \mu$ which is the canonical response function.           
 ## Lecture 5         
 Until now, we learned discriminative models (Which learns $p(y|x)$)         
 From now, we deal with basic Generative models (Which learns $p(x|y)$)        
