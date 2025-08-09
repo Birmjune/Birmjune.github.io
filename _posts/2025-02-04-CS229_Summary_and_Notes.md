@@ -27,7 +27,7 @@ $$
 **MLE: Maximum likeliood estimation**, which is a natural idea for choosing weights which is to maximize the log-likelihood, defined as
 
 $$
-l(\theta) = log(L(\theta)) = log(p(\vec{y} \,| \,x\,;\theta))
+l(\theta) = log(L(\theta)) = log(p(\vec{y}|x;\theta))
 $$           
 
 **Logistic Regression** using LR. We set the model as $h(x) = g(\theta^T x)$ when $g$ is the sigmoid function.            
