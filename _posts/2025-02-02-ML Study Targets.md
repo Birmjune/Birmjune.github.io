@@ -6,7 +6,7 @@ tags:
 layout: post 
 author: birm
 ---
-In this website, my first goal is to keep track of my machine learning study.
+In this website, one of my goals is to keep track of my machine learning study.
 
 For the basics of machine learning, I studied the CS229 course in Stanford. 
 
