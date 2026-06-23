@@ -24,3 +24,18 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+// -----------------------------------------------------------------------------
+// Custom typography: Inter (body) + Lora (headings)
+// -----------------------------------------------------------------------------
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.post-list .post-title,
+.profile .name,
+.category {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+}
