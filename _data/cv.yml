@@ -1,0 +1,41 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Birmjune Kim
+    - name: Location
+      value: South Korea
+    - name: Email
+      value: herngpt@gmail.com
+
+- title: Education
+  type: time_table
+  contents:
+    - title: B.S. in Computer Science
+      institution: Your University, South Korea
+      year: 2023 - present
+      description:
+        - Relevant coursework in machine learning, systems, and theory.
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Machine Learning
+      items:
+        - Deep learning and generative models.
+    - title: Cryptography Theory
+      items:
+        - Foundations of modern cryptography.
+    - title: Hardware Systems
+      items:
+        - Systems and hardware for fast computing.
+
+- title: Skills
+  type: list
+  contents:
+    - Python · PyTorch · C / C++ · Shell · Docker · Kubernetes
+
+- title: Languages
+  type: list
+  contents:
+    - Korean (native) · English
