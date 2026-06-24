@@ -1,6 +1,6 @@
 ---
 layout: page
-title: education
+title: Education
 permalink: /education/
 description: Courses I've taken, with my notes.
 nav: true
@@ -18,7 +18,7 @@ nav_order: 4
     {% else %}
       <strong>{{ course.title }}</strong>
     {% endif %}
-    {% if course.term %}<span class="text-muted"> — {{ course.term }}</span>{% endif %}
+    {% if course.term %}<span class="text-muted"> ({{ course.term }})</span>{% endif %}
     {% if course.description %}<br><span class="text-muted">{{ course.description }}</span>{% endif %}
   </li>
 {% endfor %}

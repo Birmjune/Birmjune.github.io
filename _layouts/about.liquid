@@ -1,80 +1,139 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+{% assign display_name = site.first_name | append: ' ' | append: site.last_name | strip %}
+{% assign news_items = site.news | reverse %}
+{% assign project_items = site.projects | sort: 'importance' %}
+
+<div class="home-landing">
+  <section class="home-hero" aria-labelledby="home-title">
+    <div class="home-hero-copy">
+      <h1 id="home-title">{{ display_name }}</h1>
+      <p class="home-subtitle">{{ page.subtitle }}</p>
+      <div class="home-intro">{{ content }}</div>
+
+      <div class="home-actions" aria-label="Primary links">
+        <a class="home-action" href="{{ '/research/' | relative_url }}">Research</a>
+        <a class="home-action" href="{{ '/projects/' | relative_url }}">Projects</a>
+        <a class="home-action" href="{{ '/education/' | relative_url }}">Course notes</a>
       </div>
+    </div>
+
+    {% if page.profile and page.profile.image %}
+      <aside class="home-profile" aria-label="Profile">
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        <img src="{{ profile_image_path | relative_url | bust_file_cache }}" alt="{{ display_name }}" loading="eager">
+        {% if page.profile.more_info %}
+          <div class="home-profile-meta">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </aside>
     {% endif %}
+  </section>
 
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+  <section class="home-section home-news" aria-labelledby="news-title">
+    <div class="home-section-heading">
+      <p class="home-section-label">Latest</p>
+      <h2 id="news-title"><a href="{{ '/news/' | relative_url }}">News</a></h2>
+    </div>
+    {% if site.news != blank %}
+      <div class="home-news-list">
+        {% for item in news_items limit: 5 %}
+          <article class="home-news-item">
+            <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%B %-d, %Y' }}</time>
+            {% if item.inline %}
+              <h3>{{ item.content | strip_html | truncate: 110 }}</h3>
+            {% else %}
+              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="home-muted">No news so far.</p>
     {% endif %}
+  </section>
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+  <section class="home-section home-research" aria-labelledby="research-title">
+    <div class="home-section-heading">
+      <p class="home-section-label">Interests</p>
+      <h2 id="research-title"><a href="{{ '/research/' | relative_url }}">Research</a></h2>
+    </div>
+    <div class="home-prose">
+      <p>I'm broadly interested in machine learning, cryptography theory, and hardware systems for fast computing, and how ideas travel between them.</p>
+      <p class="home-muted">No publications yet. See the <a href="{{ '/research/' | relative_url }}">research page</a> for current directions.</p>
+    </div>
+  </section>
+
+  <section class="home-section home-work" aria-labelledby="projects-title">
+    <div class="home-section-heading">
+      <p class="home-section-label">Selected work</p>
+      <h2 id="projects-title"><a href="{{ '/projects/' | relative_url }}">Projects</a></h2>
+    </div>
+    {% if site.projects != blank %}
+      <div class="home-work-list">
+        {% for project in project_items limit: 3 %}
+          <article class="home-work-item">
+            <a href="{{ project.url | relative_url }}">
+              <span>{{ project.category | default: 'project' }}</span>
+              <strong>{{ project.title }}</strong>
+              {% if project.description %}
+                <p>{{ project.description }}</p>
+              {% endif %}
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="home-muted">Projects will appear here as they are added.</p>
     {% endif %}
+  </section>
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+  <section class="home-section home-education" aria-labelledby="education-title">
+    <div class="home-section-heading">
+      <p class="home-section-label">Courses</p>
+      <h2 id="education-title"><a href="{{ '/education/' | relative_url }}">Education</a></h2>
+    </div>
+    {% if site.courses != blank %}
+      {% assign course_items = site.courses | sort: 'term' | reverse %}
+      <div class="home-edu-list">
+        {% for course in course_items %}
+          <article class="home-edu-item">
+            {% if course.notes %}
+              <a href="{{ course.url | relative_url }}">
+                <strong>{{ course.title }}</strong>
+                {% if course.term %}<span>{{ course.term }}</span>{% endif %}
+              </a>
+            {% else %}
+              <div class="home-edu-static">
+                <strong>{{ course.title }}</strong>
+                {% if course.term %}<span>{{ course.term }}</span>{% endif %}
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="home-muted">Courses will appear here.</p>
     {% endif %}
+  </section>
 
-    <!-- Social -->
-    {% if page.social %}
+  <section class="home-section home-misc" aria-labelledby="misc-title">
+    <div class="home-section-heading">
+      <p class="home-section-label">Beyond work</p>
+      <h2 id="misc-title">Misc</h2>
+    </div>
+    <div class="home-prose">
+      <p class="home-muted">Placeholder: add hobbies, side interests, reading, or links here.</p>
+    </div>
+  </section>
+
+  {% if page.social %}
+    <section class="home-section home-contact" aria-label="Contact links">
       <div class="social">
         <div class="contact-icons">{% social_links %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+    </section>
+  {% endif %}
 </div>

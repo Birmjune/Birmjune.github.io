@@ -21,7 +21,7 @@ The course material is organized sequentially following the lecture flow:
 7. Generative Models (2): Score-based Generative Models, Denoising Diffusion Probabilistic Models (DDPM)
 8. Adversarial attacks and defense methods
 9. Information theory and disentanglement + advanced VAE variants based on information theory ($\beta$-VAE, FactorVAE, CascadeVAE)
-10. Metric learning – classification problems with extremely large label sets
+10. Metric learning: classification problems with extremely large label sets
 11. Reinforcement Learning (RL): Basics (Bellman equations, etc.) and Deep RL (Policy Gradient, DQN, etc.)
 12. Data augmentation and mixup strategies (Manifold Mixup, CutMix, Co-Mixup)
 13. Network pruning and quantization techniques

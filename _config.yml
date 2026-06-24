@@ -9,7 +9,7 @@ last_name: Kim
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal academic homepage of Birmjune Kim — projects, research, and course notes.
+  Personal academic homepage of Birmjune Kim. Projects, research, and course notes.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -55,7 +55,7 @@ external_services:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
@@ -182,6 +182,7 @@ exclude:
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
+  - EDITING.md
   - FAQ.md
   - Gemfile
   - Gemfile.lock
@@ -449,7 +450,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Lora:500,600,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Newsreader:500,600,700|Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:
@@ -633,9 +634,11 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+# Disabled so the CV page renders from _data/cv.yml (your info), not the
+# bundled Einstein sample at assets/json/resume.json.
+# jekyll_get_json:
+#   - data: resume
+#     json: assets/json/resume.json
 
 jsonresume:
   - basics

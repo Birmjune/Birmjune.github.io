@@ -1,4 +1,4 @@
-# Social links (jekyll-socials) — shown on the about page and footer.
+# Social links (jekyll-socials). Shown on the about page and footer.
 # They are displayed in the order defined here.
 # https://github.com/george-gca/jekyll-socials
 cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file

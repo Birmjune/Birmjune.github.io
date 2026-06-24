@@ -26,7 +26,7 @@ $max-content-width: {{ site.max_width }};
 ;
 
 // -----------------------------------------------------------------------------
-// Custom typography: Inter (body) + Lora (headings)
+// Custom typography: Inter (body) + Newsreader (headings)
 // -----------------------------------------------------------------------------
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -37,5 +37,454 @@ h1, h2, h3, h4, h5, h6,
 .post-list .post-title,
 .profile .name,
 .category {
-  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+}
+
+// -----------------------------------------------------------------------------
+// Editorial homepage
+// -----------------------------------------------------------------------------
+.navbar {
+  min-height: 64px;
+  padding-right: 0;
+  padding-left: 0;
+  border-bottom: 0;
+  background-color: rgba(248, 244, 235, 0.94);
+  backdrop-filter: blur(16px);
+
+  // Match the homepage content box (.home-landing) so the brand lines up
+  // exactly with the body's left edge.
+  .container {
+    width: min(1120px, calc(100vw - 32px));
+    max-width: 1120px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.navbar.navbar-light {
+  .navbar-brand {
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    color: #2f7a75;
+  }
+}
+
+.home-landing {
+  position: relative;
+  left: 50%;
+  width: min(1120px, calc(100vw - 32px));
+  margin: -0.75rem 0 4rem;
+  transform: translateX(-50%);
+}
+
+body {
+  background-color: #f8f4eb;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 4rem;
+  align-items: end;
+  min-height: 520px;
+  padding: 5rem 0 3rem;
+  border-bottom: 1px solid rgba(72, 63, 50, 0.14);
+}
+
+.home-kicker,
+.home-section-label,
+.home-profile-meta,
+.home-news-item time,
+.home-work-item span {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-kicker {
+  margin-bottom: 1.2rem;
+  color: #2f7a75;
+}
+
+.home-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #25211b;
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.home-subtitle {
+  margin: 1.3rem 0 0;
+  color: #6f685d;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.home-intro {
+  max-width: 700px;
+  margin-top: 2.25rem;
+
+  p {
+    margin-bottom: 1rem;
+    color: #373027;
+    font-size: 1.08rem;
+    line-height: 1.72;
+  }
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.3rem;
+}
+
+.home-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(72, 63, 50, 0.24);
+  border-radius: 4px;
+  color: #25211b;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    border-color: #2f7a75;
+    color: #2f7a75;
+    text-decoration: none;
+  }
+}
+
+.home-action-primary {
+  border-color: #25211b;
+  background-color: #25211b;
+  color: #ffffff;
+
+  &:hover {
+    border-color: #2f7a75;
+    background-color: #2f7a75;
+    color: #ffffff;
+  }
+}
+
+.home-profile {
+  padding-bottom: 0.35rem;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: grayscale(12%);
+  }
+}
+
+.home-profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  margin-top: 1rem;
+  color: #536266;
+
+  p {
+    margin: 0;
+    color: inherit;
+  }
+}
+
+.home-section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid rgba(72, 63, 50, 0.13);
+}
+
+.home-section-heading {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.6rem;
+
+  h2 {
+    margin: 0;
+    color: #25211b;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: #2f7a75;
+      }
+    }
+  }
+}
+
+.home-section-label {
+  margin: 0;
+  line-height: 1.2;
+  color: #9a6b3f;
+}
+
+.home-news-item:last-child,
+.home-work-item:last-child,
+.home-edu-item:last-child {
+  border-bottom: 0;
+}
+
+.home-news-item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(72, 63, 50, 0.12);
+
+  time {
+    color: #6f685d;
+    text-transform: none;
+  }
+
+  h3 {
+    margin: 0;
+    color: #25211b;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.45;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: #2f7a75;
+      }
+    }
+  }
+}
+
+.home-work-item {
+  border-bottom: 1px solid rgba(72, 63, 50, 0.12);
+
+  a {
+    display: block;
+    padding: 1.15rem 0;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover strong {
+      color: #2f7a75;
+    }
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #9a6b3f;
+  }
+
+  strong {
+    display: block;
+    color: #25211b;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0.4rem 0 0;
+    color: #6f685d;
+    line-height: 1.55;
+  }
+}
+
+.home-prose {
+  max-width: 720px;
+
+  p {
+    margin: 0 0 0.9rem;
+    color: #373027;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #2f7a75;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.home-edu-item {
+  border-bottom: 1px solid rgba(72, 63, 50, 0.12);
+
+  a,
+  .home-edu-static {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 1rem;
+    padding: 1.1rem 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover strong {
+    color: #2f7a75;
+  }
+
+  strong {
+    color: #25211b;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  span {
+    color: #6f685d;
+    font-size: 0.92rem;
+  }
+}
+
+.home-muted {
+  color: #6f685d;
+}
+
+.home-contact {
+  border-bottom: 0;
+
+  .social {
+    text-align: left;
+  }
+
+  .social .contact-icons {
+    font-size: 2.2rem;
+  }
+}
+
+html[data-theme="dark"] {
+  .navbar {
+    border-bottom-color: transparent;
+    background-color: rgba(29, 32, 33, 0.94);
+  }
+
+  .home-hero,
+  .home-section {
+    border-bottom-color: rgba(229, 233, 233, 0.14);
+  }
+
+  .home-hero h1,
+  .home-section-heading h2,
+  .home-news-item h3,
+  .home-work-item strong,
+  .home-edu-item strong {
+    color: #f0f3f2;
+  }
+
+  .home-subtitle,
+  .home-intro p,
+  .home-prose p,
+  .home-news-item time,
+  .home-work-item p,
+  .home-edu-item span,
+  .home-profile-meta,
+  .home-muted {
+    color: #b7c1c2;
+  }
+
+  .home-action {
+    border-color: rgba(229, 233, 233, 0.26);
+    color: #f0f3f2;
+  }
+
+  .home-action-primary {
+    border-color: #f0f3f2;
+    background-color: #f0f3f2;
+    color: #172022;
+  }
+
+  .home-news-item,
+  .home-work-item,
+  .home-edu-item {
+    border-color: rgba(229, 233, 233, 0.12);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    min-height: auto;
+    padding-top: 3.5rem;
+  }
+
+  .home-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .home-profile {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-landing {
+    width: min(100%, calc(100vw - 24px));
+  }
+
+  .home-hero {
+    padding: 2.4rem 0 2.2rem;
+  }
+
+  .home-hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .home-section-heading,
+  .home-news-item {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .home-section-heading h2 {
+    font-size: 1.65rem;
+  }
+
+  .home-actions {
+    flex-direction: column;
+  }
+
+  .home-action {
+    justify-content: center;
+    width: 100%;
+  }
 }

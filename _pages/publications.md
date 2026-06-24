@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /research/
-title: research
+title: Research
 description: Research interests and publications.
 nav: true
 nav_order: 3
@@ -13,7 +13,7 @@ nav_order: 3
   <strong>hardware systems for fast computing</strong>.
 </p>
 
-<p>No publications yet — this page will be updated as projects mature.</p>
+<p>No publications yet. This page will be updated as projects mature.</p>
 
 <p class="text-muted">
   Once you have papers, add them to <code>_bibliography/papers.bib</code> and render
