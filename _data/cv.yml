@@ -4,28 +4,64 @@
     - name: Full Name
       value: Birmjune Kim
     - name: Location
-      value: South Korea
+      value: Seoul, South Korea
     - name: Email
       value: herngpt@gmail.com
 
 - title: Education
   type: time_table
   contents:
-    - title: B.S. in Computer Science
-      institution: Your University, South Korea
-      year: 2023 - present
+    - title: B.S. in Computer Science and Engineering
+      institution: Seoul National University, South Korea
+      year: 2024 - present
       description:
-        - Relevant coursework in machine learning, systems, and theory.
+        - Ranked 1st among all students in the Computer Architecture course.
+    - title: Seoul Science High School (33rd class)
+      institution: Seoul, South Korea
+      year: 2021 - 2023
+      description:
+        - GPA 4.29 / 4.3 (1st in the graduating class for college admission).
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Research Intern
+      institution: Machine Learning Lab (Prof. Hyun Oh Song), Seoul National University
+      year: 2025 - present
+      description:
+        - Researching and implementing a dynamic programming based dynamic decoding process for time series foundation models.
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - Entrepreneur Award (1st place for the idea), 3rd SKYST Joint Hackathon
+        - Finalist (top 100), 2025 NYPC Code Battle
+        - Finalist, Samsung Collegiate Programming Challenge (AI track)
+    - year: 2024
+      items:
+        - National Science and Engineering Scholarship
+        - 8th overall (Team division), Simon Marais Mathematics Competition
+        - 928th of 1161 teams (score 11/50), Kaggle AI Mathematical Olympiad (Progress Prize 1)
+    - year: 2023
+      items:
+        - Best Award, Graduation Thesis in Mathematics (Seoul Science High School)
+    - year: 2022
+      items:
+        - Gold Medal, Korean Mathematical Olympiad (KMO), high school division
+        - Best Award, R&E Research Competition in Mathematics (Seoul Science High School)
+        - Excellence Award, Research Project Competition in Mathematics (Seoul Science High School)
+    - year: 2021
+      items:
+        - Excellence Award, Research Project Competition in Physics (Seoul Science High School)
 
 - title: Research Interests
   type: nested_list
   contents:
-    - title: Machine Learning
+    - title: Artificial Intelligence
       items:
-        - Deep learning and generative models.
-    - title: Cryptography Theory
-      items:
-        - Foundations of modern cryptography.
+        - Foundation models and time series modeling.
     - title: Hardware Systems
       items:
         - Systems and hardware for fast computing.

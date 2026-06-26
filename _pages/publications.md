@@ -8,14 +8,17 @@ nav_order: 3
 ---
 
 <p>
-  I'm an undergraduate getting started in research. My current interests are in
-  <strong>machine learning</strong>, <strong>cryptography theory</strong>, and
-  <strong>hardware systems for fast computing</strong>.
+  I'm an undergraduate getting started in research, broadly interested in
+  <strong>artificial intelligence</strong> and <strong>hardware systems for fast
+  computing</strong>.
 </p>
 
-<p>No publications yet. This page will be updated as projects mature.</p>
-
-<p class="text-muted">
-  Once you have papers, add them to <code>_bibliography/papers.bib</code> and render
-  them on this page with a Jekyll Scholar bibliography tag.
+<p>
+  Since December 2025, I have been a research intern at the
+  <a href="https://mllab.snu.ac.kr/">Machine Learning Lab</a> (Prof. Hyun Oh Song)
+  at Seoul National University. My current work studies a
+  <strong>dynamic programming based dynamic decoding process for time series
+  foundation models</strong>.
 </p>
+
+<p>No publications yet. This page will be updated as my research matures.</p>

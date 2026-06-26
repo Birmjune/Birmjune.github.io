@@ -82,23 +82,13 @@ category: work
 
 ---
 
-## 4. Education / 강의 노트 - `_courses/`
+## 4. 강의 / 스터디에서 한 것 → Projects 로
 
-파일 하나 = 강의 하나. `term`(학기) 기준 최신순으로 정렬된다.
-`/education/` 페이지와 홈 Education 섹션에 자동 노출된다.
+별도 Education 섹션·페이지는 두지 않는다. 수업이나 스터디에서 한 작업은 **Projects**(위 2번)로 올린다.
 
-```yaml
----
-layout: course        # 노트 페이지용 레이아웃 (일반 글은 page)
-title: 강의 이름
-term: SNU, Fall 2025
-notes: true           # true면 제목이 노트 페이지로 링크된다
----
-
-강의 정리 내용 (마크다운, 수식은 $...$ 로 작성).
-```
-
-- `notes: false`(또는 생략)면 링크 없이 이름만 목록에 표시된다.
+> 예전 "Basics of Deep Learning" 강의 노트는 `_courses/dl-basics.md` 에 남아 있다.
+> 직접 URL `/courses/dl-basics/` 로는 열리지만 지금은 어디에도 링크돼 있지 않다.
+> Projects 카드로 옮기거나, 필요 없으면 그 파일을 지워도 된다.
 
 ---
 
