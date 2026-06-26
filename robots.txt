@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://Birmjune.github.io/sitemap.xml
