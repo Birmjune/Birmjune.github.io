@@ -728,13 +728,13 @@ footer.sticky-bottom {
       }
     }
 
-    // Nudge the description and GitHub link a hair to the right of the title.
+    // Indent the title, description, and GitHub link together so the whole
+    // text block sits a hair to the right while staying aligned with itself.
+    .card-title,
     .card-text {
       margin-left: 0.35rem;
     }
 
-    // GitHub link row: dropped a little lower for breathing room and indented
-    // to line up with the description above it.
     .github-links {
       display: flex;
       align-items: center;
