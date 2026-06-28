@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-projects",
-          title: "Projects",
-          description: "A collection of things I&#39;ve built.",
+  },{id: "nav-news",
+          title: "News",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/news/";
           },
         },{id: "nav-research",
           title: "Research",
@@ -22,6 +22,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
+          },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "A collection of things I&#39;ve built.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
           },
         },{id: "nav-cv",
           title: "CV",
@@ -76,7 +83,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%68%65%72%6E%67%70%74@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%6A%6F%68%6E%62%69%65%30%36%32%37@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
