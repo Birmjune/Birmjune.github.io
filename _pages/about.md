@@ -6,7 +6,7 @@ subtitle: Computer Science Undergraduate, South Korea
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.svg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Seoul, South Korea</p>

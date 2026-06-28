@@ -728,12 +728,18 @@ footer.sticky-bottom {
       }
     }
 
-    // GitHub link row: flush-left with the title/description and dropped a
-    // little lower for breathing room.
+    // Nudge the description and GitHub link a hair to the right of the title.
+    .card-text {
+      margin-left: 0.35rem;
+    }
+
+    // GitHub link row: dropped a little lower for breathing room and indented
+    // to line up with the description above it.
     .github-links {
       display: flex;
       align-items: center;
       margin-top: 0.6rem;
+      margin-left: 0.35rem;
     }
   }
 
