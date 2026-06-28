@@ -8,8 +8,6 @@ category: deep learning
 github: https://github.com/Birmjune/Easy-ARC-AGI-solver
 ---
 
-> 참고: `img`(현재 샘플 이미지)를 실제 스크린샷으로 바꾸고, 아래 설명을 원하는 만큼 다듬으세요.
-
 Team project for **Basics of Deep Learning** (SNU, 2025 Spring).
 
 **ARC-AGI** (Abstraction and Reasoning Corpus) gives a few input/output grid

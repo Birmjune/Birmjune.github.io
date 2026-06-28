@@ -4,16 +4,24 @@ title: Projects
 permalink: /projects/
 description: A collection of things I've built.
 nav: true
-nav_order: 2
-horizontal: false
+nav_order: 3
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}
-<div class="row row-cols-1 row-cols-md-3">
-  {% for project in sorted_projects %}
-    {% include projects.liquid %}
-  {% endfor %}
-</div>
+{% if page.horizontal %}
+  <div class="row row-cols-1">
+    {% for project in sorted_projects %}
+      {% include projects_horizontal.liquid %}
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="row row-cols-1 row-cols-md-3">
+    {% for project in sorted_projects %}
+      {% include projects.liquid %}
+    {% endfor %}
+  </div>
+{% endif %}
 </div>

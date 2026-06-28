@@ -8,8 +8,6 @@ category: vision-language
 github: https://github.com/Birmjune/Image2Answer-4optionMCQ
 ---
 
-> 참고: `img`(현재 샘플 이미지)를 실제 스크린샷으로 바꾸고, 아래 설명을 원하는 만큼 다듬으세요.
-
 Submission for the **Samsung Collegiate Programming Challenge: AI track**
 (advanced to the finals).
 

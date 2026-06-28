@@ -4,7 +4,7 @@ permalink: /research/
 title: Research
 description: Research interests and publications.
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 <p>

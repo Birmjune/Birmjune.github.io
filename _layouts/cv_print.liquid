@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ site.first_name }} {{ site.last_name }} — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  :root{
+    --accent:#2f7a75; --ink:#1c1c1c; --muted:#6b6b6b; --faint:#8a8a8a; --hair:#e2e2e2;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  @page{ size:A4; margin:0; }
+  html,body{ margin:0; padding:0; background:#fff; }
+
+  .sheet{
+    width:210mm; padding:12mm 18mm 12mm; margin:0 auto;
+    background:#fff; color:var(--ink); font-family:var(--sans);
+    font-size:10pt; line-height:1.38;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+
+  .head{ border-bottom:2px solid var(--accent); padding-bottom:7pt; margin-bottom:10pt; }
+  .name{ font-family:var(--serif); font-weight:600; font-size:26pt; line-height:1.04; letter-spacing:.2px; margin:0; }
+  .role{ color:var(--accent); font-weight:500; font-size:10.5pt; margin:4pt 0 0; }
+  .contact{ color:var(--muted); font-size:9.2pt; margin-top:7pt; }
+  .contact a{ color:var(--muted); text-decoration:none; }
+  .contact .sep{ color:var(--hair); margin:0 7pt; }
+
+  section{ margin-bottom:8pt; page-break-inside:avoid; }
+  .sec-title{
+    font-family:var(--serif); font-weight:600; font-size:13pt; color:var(--ink);
+    margin:0 0 6pt; padding-bottom:2pt; border-bottom:1px solid var(--hair); letter-spacing:.2px;
+  }
+
+  .entry{ display:grid; grid-template-columns:23mm 1fr; gap:0 9pt; margin-bottom:5.5pt; }
+  .entry:last-child{ margin-bottom:0; }
+  .year{ color:var(--faint); font-size:9.2pt; font-weight:500; padding-top:1.5pt; white-space:nowrap; }
+  .e-title{ font-weight:600; font-size:10.6pt; color:var(--ink); }
+  .e-org{ color:var(--muted); font-size:9.7pt; margin-top:.5pt; }
+  ul.bullets{ margin:3pt 0 0; padding-left:14pt; }
+  ul.bullets li{ margin:1.5pt 0; }
+  ul.awards{ margin:0; padding-left:14pt; }
+  ul.awards li{ margin:1.5pt 0; }
+
+  ul.interests{ margin:0; padding-left:14pt; }
+  ul.interests li{ margin:2pt 0; }
+  ul.interests strong{ font-weight:600; }
+  .pill-line{ font-size:10.2pt; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  {%- assign gi = site.data.cv | where: "title", "General Information" | first -%}
+  {%- for c in gi.contents -%}
+    {%- if c.name == "Location" -%}{%- assign cv_location = c.value -%}{%- endif -%}
+    {%- if c.name == "Email" -%}{%- assign cv_email = c.value -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign site_host = site.url | remove: "https://" | remove: "http://" | remove: "/" | downcase -%}
+
+  <header class="head">
+    <h1 class="name">{{ site.first_name }} {{ site.last_name }}</h1>
+    <p class="role">Computer Science &amp; Engineering Undergraduate · Seoul National University</p>
+    <p class="contact">
+      {%- if cv_location %}{{ cv_location }}<span class="sep">|</span>{% endif -%}
+      {%- if cv_email %}<a href="mailto:{{ cv_email }}">{{ cv_email }}</a>{% endif -%}
+      {%- if site.data.socials.github_username %}<span class="sep">|</span><a href="https://github.com/{{ site.data.socials.github_username }}">github.com/{{ site.data.socials.github_username }}</a>{% endif -%}
+      {%- if site_host %}<span class="sep">|</span><a href="{{ site.url }}">{{ site_host }}</a>{% endif -%}
+    </p>
+  </header>
+
+  {%- for section in site.data.cv -%}
+    {%- unless section.title == "General Information" -%}
+      <section>
+        <h2 class="sec-title">{{ section.title }}</h2>
+
+        {%- if section.type == "time_table" -%}
+          {%- for entry in section.contents -%}
+            <div class="entry">
+              <div class="year">{{ entry.year }}</div>
+              <div>
+                {%- if entry.items -%}
+                  <ul class="awards">{%- for it in entry.items -%}<li>{{ it }}</li>{%- endfor -%}</ul>
+                {%- else -%}
+                  {%- if entry.title %}<div class="e-title">{{ entry.title }}</div>{% endif -%}
+                  {%- if entry.institution %}<div class="e-org">{{ entry.institution }}</div>{% endif -%}
+                  {%- if entry.description %}<ul class="bullets">{%- for d in entry.description -%}<li>{{ d }}</li>{%- endfor -%}</ul>{% endif -%}
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+
+        {%- elsif section.type == "nested_list" -%}
+          <ul class="interests">
+            {%- for c in section.contents -%}
+              <li><strong>{{ c.title }}</strong> — {% for it in c.items %}{{ it }}{% unless forloop.last %} {% endunless %}{% endfor %}</li>
+            {%- endfor -%}
+          </ul>
+
+        {%- elsif section.type == "list" -%}
+          {%- for c in section.contents -%}<p class="pill-line">{{ c }}</p>{%- endfor -%}
+
+        {%- elsif section.type == "map" -%}
+          {%- for c in section.contents -%}<p class="pill-line"><strong>{{ c.name }}:</strong> {{ c.value }}</p>{%- endfor -%}
+        {%- endif -%}
+      </section>
+    {%- endunless -%}
+  {%- endfor -%}
+
+</div>
+</body>
+</html>

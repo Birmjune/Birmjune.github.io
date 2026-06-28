@@ -6,7 +6,7 @@
     - name: Location
       value: Seoul, South Korea
     - name: Email
-      value: herngpt@gmail.com
+      value: johnbie0627@gmail.com
 
 - title: Education
   type: time_table
@@ -16,7 +16,7 @@
       year: 2024 - present
       description:
         - Ranked 1st among all students in the Computer Architecture course.
-    - title: Seoul Science High School (33rd class)
+    - title: Seoul Science High School
       institution: Seoul, South Korea
       year: 2021 - 2023
       description:
@@ -43,7 +43,6 @@
       items:
         - National Science and Engineering Scholarship
         - 8th overall (Team division), Simon Marais Mathematics Competition
-        - 928th of 1161 teams (score 11/50), Kaggle AI Mathematical Olympiad (Progress Prize 1)
     - year: 2023
       items:
         - Best Award, Graduation Thesis in Mathematics (Seoul Science High School)
@@ -69,7 +68,7 @@
 - title: Skills
   type: list
   contents:
-    - Python · PyTorch · C / C++ · Shell · Docker · Kubernetes
+    - Python · PyTorch · C / C++ · Shell
 
 - title: Languages
   type: list
