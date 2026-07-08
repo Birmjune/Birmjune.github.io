@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Launched my personal website. 🎉
+Launched my personal website.

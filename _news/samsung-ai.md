@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Finalist, Samsung Collegiate Programming Challenge (AI track), with [Image2Answer](/projects/image2answer/).
+Reached the finals of the Samsung Collegiate Programming Challenge (AI track) with [Image2Answer](/projects/image2answer/).

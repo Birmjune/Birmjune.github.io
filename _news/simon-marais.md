@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-8th overall (Team division), Simon Marais Mathematics Competition.
+Placed 8th in the Team division of the Simon Marais Mathematics Competition.

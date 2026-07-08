@@ -36,7 +36,7 @@
   contents:
     - year: 2025
       items:
-        - Entrepreneur Award (1st place for the idea), 3rd SKYST Joint Hackathon
+        - Entrepreneur Award (Best Idea), 3rd SKYST Joint Hackathon
         - Top 100, 2025 NYPC Code Battle
         - Finalist, Samsung Collegiate Programming Challenge (AI track)
     - year: 2024
@@ -64,13 +64,3 @@
     - title: Hardware Systems
       items:
         - Systems and hardware for fast computing.
-
-- title: Skills
-  type: list
-  contents:
-    - Python · PyTorch · C / C++ · Shell
-
-- title: Languages
-  type: list
-  contents:
-    - Korean (native) · English

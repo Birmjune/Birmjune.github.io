@@ -42,7 +42,7 @@ layout: default
           <article class="home-news-item">
             <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%B %Y' }}</time>
             {% if item.inline %}
-              <h3>{{ item.content | strip_html | truncate: 110 }}</h3>
+              <h3>{{ item.content | remove: '<p>' | remove: '</p>' | strip_newlines | emojify | truncate: 220 }}</h3>
             {% else %}
               <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
             {% endif %}

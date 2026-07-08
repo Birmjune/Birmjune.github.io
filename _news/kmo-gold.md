@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Gold Medal, Korean Mathematical Olympiad (KMO).
+Won a Gold Medal at the Korean Mathematical Olympiad (KMO).
