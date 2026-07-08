@@ -26,6 +26,4 @@ latest_posts:
   limit: 3
 ---
 
-Hi! I'm **Birmjune Kim**, a Computer Science and Engineering undergraduate at Seoul National University.
-
-I'm broadly interested in **artificial intelligence** and **hardware systems for fast computing**. I'm currently a research intern at the [SNU Machine Learning Lab](https://mllab.snu.ac.kr/) (Prof. Hyun Oh Song), where I work on research related to time series foundation models. This site collects my [projects](/projects/) and [research notes](/research/) as I learn.
+Hi! I'm **Birmjune Kim**, a Computer Science and Engineering undergraduate at Seoul National University, currently a research intern at the [SNU Machine Learning Lab](https://mllab.snu.ac.kr/) (Prof. Hyun Oh Song). This site collects my [projects](/projects/) and [research notes](/research/) as I learn.
