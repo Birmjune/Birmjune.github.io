@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started a research internship at the [Machine Learning Lab](https://mllab.snu.ac.kr/) (Prof. Hyun Oh Song), SNU, working on time series foundation models.
+Started a research internship at the SNU [Machine Learning Lab](https://mllab.snu.ac.kr/) (Prof. Hyun Oh Song).

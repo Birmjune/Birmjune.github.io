@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Selected as a National Science and Engineering Scholarship recipient.
+Selected for the National Science &amp; Technology Scholarship.

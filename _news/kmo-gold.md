@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Awarded a Gold Medal at the Korean Mathematical Olympiad (KMO), high school division.
+Gold Medal, Korean Mathematical Olympiad (KMO).

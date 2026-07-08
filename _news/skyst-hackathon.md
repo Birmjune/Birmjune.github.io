@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Received the Entrepreneur Award (1st place for the idea) at the 3rd SKYST Joint Hackathon.
+Entrepreneur Award (1st place, idea), 3rd SKYST Joint Hackathon.

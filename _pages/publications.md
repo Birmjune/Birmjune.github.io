@@ -16,9 +16,8 @@ nav_order: 2
 <p>
   Since December 2025, I have been a research intern at the
   <a href="https://mllab.snu.ac.kr/">Machine Learning Lab</a> (Prof. Hyun Oh Song)
-  at Seoul National University. My current work studies a
-  <strong>dynamic programming based dynamic decoding process for time series
-  foundation models</strong>.
+  at Seoul National University, where I work on research related to
+  <strong>time series foundation models</strong>.
 </p>
 
 <p>No publications yet. This page will be updated as my research matures.</p>
