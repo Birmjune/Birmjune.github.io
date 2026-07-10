@@ -8,9 +8,10 @@ nav_order: 2
 ---
 
 <p>
-  I'm an undergraduate getting started in research, broadly interested in
-  <strong>artificial intelligence</strong> and <strong>hardware systems for fast
-  computing</strong>.
+  I'm an undergraduate getting started in research, broadly interested in making
+  <strong>AI models and systems more efficient across the computing stack</strong>,
+  from model compression and quantization to compilers, operating systems, and
+  hardware.
 </p>
 
 <p>

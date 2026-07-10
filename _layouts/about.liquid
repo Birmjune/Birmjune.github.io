@@ -41,11 +41,7 @@ layout: default
         {% for item in news_items limit: 5 %}
           <article class="home-news-item">
             <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%B %Y' }}</time>
-            {% if item.inline %}
-              <h3>{{ item.content | remove: '<p>' | remove: '</p>' | strip_newlines | emojify | truncate: 220 }}</h3>
-            {% else %}
-              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-            {% endif %}
+            <h3>{{ item.content | remove: '<p>' | remove: '</p>' | strip_newlines | truncate: 220 }}</h3>
           </article>
         {% endfor %}
       </div>
@@ -60,7 +56,7 @@ layout: default
       <h2 id="research-title"><a href="{{ '/research/' | relative_url }}">Research</a></h2>
     </div>
     <div class="home-prose">
-      <p>I'm broadly interested in artificial intelligence and hardware systems for fast computing. As a research intern at the SNU Machine Learning Lab (Prof. Hyun Oh Song), I work on research related to time series foundation models. No publications yet — see the <a href="{{ '/research/' | relative_url }}">research page</a> for current directions.</p>
+      <p>I'm broadly interested in making AI models and systems more efficient across the computing stack, from model compression and quantization to compilers, operating systems, and hardware. As a research intern at the SNU Machine Learning Lab (Prof. Hyun Oh Song), I work on research related to time series foundation models. No publications yet — see the <a href="{{ '/research/' | relative_url }}">research page</a> for current directions.</p>
     </div>
   </section>
 
@@ -98,12 +94,13 @@ layout: default
     </div>
   </section>
 
-  {% if page.social %}
-    <section class="home-section home-contact" aria-label="Contact links">
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-        <div class="contact-note">{{ site.contact_note }}</div>
+  <section class="home-section home-contact" aria-label="Contact links">
+    <div class="social">
+      <div class="contact-icons">
+        <a href="{{ site.data.socials.cv_pdf | relative_url }}" title="CV" aria-label="CV"><i class="fa-solid fa-file-pdf"></i></a>
+        <a href="mailto:{{ site.data.socials.email }}" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/{{ site.data.socials.github_username }}" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       </div>
-    </section>
-  {% endif %}
+    </div>
+  </section>
 </div>

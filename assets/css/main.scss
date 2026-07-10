@@ -11,18 +11,10 @@ $max-content-width: {{ site.max_width }};
   "themes",
   "layout",
   "base",
-  "distill",
   "cv",
-  "tabs",
-  "teachings",
-  "typograms",
   "font-awesome/fontawesome",
   "font-awesome/brands",
-  "font-awesome/solid",
-  "font-awesome/regular",
-  "tabler-icons/tabler-icons.scss",
-  "tabler-icons/tabler-icons-filled.scss",
-  "tabler-icons/tabler-icons-outline.scss"
+  "font-awesome/solid"
 ;
 
 // -----------------------------------------------------------------------------
@@ -357,51 +349,6 @@ body {
 
   .social .contact-icons {
     font-size: 2.2rem;
-  }
-}
-
-html[data-theme="dark"] {
-  .navbar {
-    border-bottom-color: transparent;
-    background-color: rgba(29, 32, 33, 0.94);
-  }
-
-  .home-hero,
-  .home-section {
-    border-bottom-color: rgba(229, 233, 233, 0.14);
-  }
-
-  .home-hero h1,
-  .home-section-heading h2,
-  .home-news-item h3,
-  .home-work-item strong {
-    color: #f0f3f2;
-  }
-
-  .home-subtitle,
-  .home-intro p,
-  .home-prose p,
-  .home-news-item time,
-  .home-work-item p,
-  .home-profile-meta,
-  .home-muted {
-    color: #b7c1c2;
-  }
-
-  .home-action {
-    border-color: rgba(229, 233, 233, 0.26);
-    color: #f0f3f2;
-  }
-
-  .home-action-primary {
-    border-color: #f0f3f2;
-    background-color: #f0f3f2;
-    color: #172022;
-  }
-
-  .home-news-item,
-  .home-work-item {
-    border-color: rgba(229, 233, 233, 0.12);
   }
 }
 

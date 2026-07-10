@@ -58,9 +58,9 @@
 - title: Research Interests
   type: nested_list
   contents:
-    - title: Artificial Intelligence
+    - title: Efficient AI Systems
+      items:
+        - Cross-stack optimization for AI, including model compression, quantization, compilers, operating systems, and hardware acceleration.
+    - title: Foundation Models
       items:
         - Foundation models and time series modeling.
-    - title: Hardware Systems
-      items:
-        - Systems and hardware for fast computing.
