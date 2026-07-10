@@ -9,9 +9,9 @@ nav_order: 2
 
 <p>
   I'm an undergraduate getting started in research, broadly interested in making
-  <strong>AI models and systems more efficient across the computing stack</strong>,
-  from model compression and quantization to compilers, operating systems, and
-  hardware.
+  <strong>AI models and systems more capable and efficient</strong> (e.g.,
+  inference-time reasoning, model compression, quantization, AI compilers,
+  systems software, and hardware acceleration).
 </p>
 
 <p>
