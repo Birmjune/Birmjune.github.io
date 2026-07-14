@@ -3,4 +3,4 @@ date: 2024-04-01 09:00:00+0900
 inline: true
 ---
 
-Selected for the National Science &amp; Technology Scholarship.
+Selected for the National Science &amp; Technology Scholarship (Full Scholarship).
