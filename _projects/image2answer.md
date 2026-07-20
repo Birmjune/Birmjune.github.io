@@ -2,7 +2,7 @@
 layout: page
 title: "Image2Answer: 4-Option MCQ Solver"
 description: A vision-language pipeline that answers image-based multiple-choice questions. Advanced to the finals of the Samsung Collegiate Programming Challenge (AI track).
-img: assets/img/5.jpg
+img: assets/img/projects/image2answer-demo.png
 importance: 2
 category: vision-language
 github: https://github.com/Birmjune/Image2Answer-4optionMCQ

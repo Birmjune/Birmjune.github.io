@@ -2,7 +2,7 @@
 layout: page
 title: Easy ARC-AGI Challenge Solver
 description: A solver for ARC-AGI abstract reasoning tasks on grids up to 10x10. Private score 63/100.
-img: assets/img/3.jpg
+img: assets/img/projects/arc-agi-007bbfb7.svg
 importance: 1
 category: deep learning
 github: https://github.com/Birmjune/Easy-ARC-AGI-solver
