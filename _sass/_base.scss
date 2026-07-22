@@ -706,11 +706,15 @@ footer.sticky-bottom {
   // gap. The float keeps the image filling its side cleanly. On narrow screens
   // the image becomes a full-width banner with the text stacked beneath it.
   .project-horizontal {
+    .project-thumbnail {
+      background-color: #fff; // bright backdrop behind the letterboxed image
+    }
+
     .project-thumbnail .card-img {
       display: block;
       width: 100%;
       height: 200px;
-      object-fit: cover;
+      object-fit: contain; // show the whole image instead of cropping it
       padding-top: 0;
     }
 
