@@ -54,9 +54,9 @@
 - title: Research Interests
   type: nested_list
   contents:
-    - title: Efficient AI Systems
+    - title: AI Optimization
       items:
-        - Cross-stack optimization for AI, including model compression, quantization, compilers, operating systems, and hardware acceleration.
-    - title: Foundation Models
+        - Optimizing AI at various stages (training, inference and serving, model compression and quantization, AI compilers, systems software, and hardware acceleration). Currently applied to foundation models and time series modeling.
+    - title: AI in the Physical World
       items:
-        - Foundation models and time series modeling.
+        - Putting the resulting models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
