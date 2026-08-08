@@ -2,6 +2,24 @@
  * CV shared styles
  *****************************/
 
+// The CV is table-heavy, so give it more horizontal room than the site-wide
+// $max-content-width and hand most of the extra width to the content column.
+body.cv-page .container {
+  max-width: 1180px;
+}
+
+@media (min-width: 576px) {
+  body.cv-page .col-sm-3 {
+    flex: 0 0 21%;
+    max-width: 21%;
+  }
+
+  body.cv-page .col-sm-9 {
+    flex: 0 0 79%;
+    max-width: 79%;
+  }
+}
+
 div.container-link-button {
   margin-right: 0.5rem;
 }

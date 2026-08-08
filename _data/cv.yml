@@ -30,25 +30,23 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - Finalist, 10th of 206 teams, SNU AI Challenge 2026
     - year: 2025
       items:
-        - Entrepreneur Award (Best Idea), 3rd SKYST Joint Hackathon
-        - Top 100, 2025 NYPC Code Battle
+        - Entrepreneur Award (1st in business idea), 3rd SKYST Joint Hackathon
         - Finalist, Samsung Collegiate Programming Challenge (AI track)
     - year: 2024
       items:
         - National Science &amp; Technology Scholarship (Full Scholarship)
         - 8th overall (Team division), Simon Marais Mathematics Competition
-    - year: 2023
+    - year: "~2023"
       items:
         - Best Award, Graduation Thesis in Mathematics (Seoul Science High School)
-    - year: 2022
-      items:
         - Gold Medal, Korean Mathematical Olympiad (KMO), high school division
         - Best Award, R&E Research Competition in Mathematics (Seoul Science High School)
         - Excellence Award, Research Project Competition in Mathematics (Seoul Science High School)
-    - year: 2021
-      items:
         - Excellence Award, Research Project Competition in Physics (Seoul Science High School)
 
 - title: Research Interests

@@ -8,10 +8,12 @@
 {% if page.toc and page.toc.sidebar %}
   <script defer src="{{ '/assets/js/bootstrap-toc.min.js' | relative_url | bust_file_cache }}"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navSelector = "#toc-sidebar";
-      Toc.init($(navSelector));
-      $("body").scrollspy({ target: navSelector, offset: 100 });
+    // bootstrap-toc auto-builds every nav[data-toggle="toc"] on jQuery ready, so the
+    // nav is marked up in the layout and we must NOT call Toc.init() ourselves --
+    // doing both renders the entry list twice. Scrollspy waits for window load so the
+    // links already exist.
+    window.addEventListener("load", function () {
+      $("body").scrollspy({ target: "#toc-sidebar", offset: 100 });
     });
   </script>
 {% endif %}
