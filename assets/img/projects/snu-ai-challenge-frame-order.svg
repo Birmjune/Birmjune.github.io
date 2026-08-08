@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Storyline frame ordering</title>
+  <desc id="description">Four shuffled story frames of a sunrise are reordered by the model into the sequence described by a natural language caption.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#111b2e"/>
+    </linearGradient>
+    <linearGradient id="arrowGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#62a9ff"/>
+      <stop offset="1" stop-color="#8c6bff"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .eyebrow { fill: #79b7ff; font-size: 24px; font-weight: 700; letter-spacing: 5px; }
+      .label { fill: #f7f9fc; font-size: 27px; font-weight: 750; letter-spacing: 3px; }
+      .hint { fill: #9aacc3; font-size: 21px; font-weight: 500; }
+      .caption { fill: #cddcee; font-size: 25px; font-weight: 500; font-style: italic; }
+      .tag { fill: #f7f9fc; font-size: 26px; font-weight: 750; }
+      .frame { fill: #0b1423; stroke: #2d4059; stroke-width: 3; }
+      .horizon { stroke: #46617f; stroke-width: 3; fill: none; }
+      .hill { fill: #16233a; }
+      .arrow { animation: pulse 1.5s ease-in-out infinite; }
+      .shuffled { animation: jitter 6.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .out { opacity: 0; animation-duration: 6.4s; animation-iteration-count: infinite; }
+      .out-1 { animation-name: reveal1; }
+      .out-2 { animation-name: reveal2; }
+      .out-3 { animation-name: reveal3; }
+      .out-4 { animation-name: reveal4; }
+      .thinking { animation: thinking 6.4s infinite; }
+      .solved { opacity: 0; animation: solved 6.4s infinite; }
+      @keyframes pulse { 0%, 100% { opacity: .5; transform: translateY(-6px); } 50% { opacity: 1; transform: translateY(6px); } }
+      @keyframes jitter { 0%, 100% { opacity: .78; } 12%, 88% { opacity: 1; } }
+      @keyframes reveal1 { 0%, 20% { opacity: 0; transform: translateY(10px); } 27%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+      @keyframes reveal2 { 0%, 31% { opacity: 0; transform: translateY(10px); } 38%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+      @keyframes reveal3 { 0%, 42% { opacity: 0; transform: translateY(10px); } 49%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+      @keyframes reveal4 { 0%, 53% { opacity: 0; transform: translateY(10px); } 60%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+      @keyframes thinking { 0%, 60% { opacity: 1; } 66%, 100% { opacity: 0; } }
+      @keyframes solved { 0%, 62% { opacity: 0; transform: translateY(8px); } 70%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        .arrow, .shuffled, .out, .thinking, .solved { animation: none !important; }
+        .out, .solved { opacity: 1; transform: none; }
+        .thinking { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="800" cy="450" r="520" fill="#296dff" opacity=".035"/>
+
+  <text x="70" y="72" class="eyebrow">SNU AI CHALLENGE 2026 · TEAM DEEPRED</text>
+  <text x="70" y="124" fill="#f7f9fc" font-size="38" font-weight="760">Put the story back in order.</text>
+  <text x="70" y="176" class="caption">“The sun climbs over the hills as morning breaks.”</text>
+
+  <!-- ============ shuffled input row ============ -->
+  <text x="70" y="248" class="label">SHUFFLED FRAMES</text>
+  <text x="1530" y="248" text-anchor="end" class="hint">order unknown</text>
+
+  <g class="shuffled">
+    <!-- frame C -->
+    <g>
+      <rect x="70" y="272" width="320" height="200" rx="18" class="frame"/>
+      <path d="M70 400 Q150 350 230 400 Q310 355 390 400" class="hill"/>
+      <path d="M88 410 H372" class="horizon"/>
+      <circle cx="230" cy="345" r="26" fill="#e08b34" opacity=".92"/>
+      <text x="98" y="316" class="tag" opacity=".85">C</text>
+    </g>
+    <!-- frame A -->
+    <g>
+      <rect x="450" y="272" width="320" height="200" rx="18" class="frame"/>
+      <path d="M450 400 Q530 350 610 400 Q690 355 770 400" class="hill"/>
+      <path d="M468 410 H752" class="horizon"/>
+      <circle cx="530" cy="396" r="26" fill="#7d5f38" opacity=".92"/>
+      <text x="478" y="316" class="tag" opacity=".85">A</text>
+    </g>
+    <!-- frame D -->
+    <g>
+      <rect x="830" y="272" width="320" height="200" rx="18" class="frame"/>
+      <path d="M830 400 Q910 350 990 400 Q1070 355 1150 400" class="hill"/>
+      <path d="M848 410 H1132" class="horizon"/>
+      <circle cx="1070" cy="325" r="26" fill="#f49b32"/>
+      <text x="858" y="316" class="tag" opacity=".85">D</text>
+    </g>
+    <!-- frame B -->
+    <g>
+      <rect x="1210" y="272" width="320" height="200" rx="18" class="frame"/>
+      <path d="M1210 400 Q1290 350 1370 400 Q1450 355 1530 400" class="hill"/>
+      <path d="M1228 410 H1512" class="horizon"/>
+      <circle cx="1290" cy="372" r="26" fill="#a8763a" opacity=".92"/>
+      <text x="1238" y="316" class="tag" opacity=".85">B</text>
+    </g>
+  </g>
+
+  <!-- ============ model ============ -->
+  <g class="arrow" filter="url(#glow)">
+    <path d="M800 502 V566" fill="none" stroke="url(#arrowGradient)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M766 540 L800 576 L834 540" fill="none" stroke="#8c6bff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="470" y="548" text-anchor="end" fill="#aebfd3" font-size="21" font-weight="650">27B VLM · LoRA · PERMUTATION TTA</text>
+
+  <g class="thinking">
+    <rect x="1010" y="512" width="330" height="56" rx="28" fill="#15243a" stroke="#355174" stroke-width="2"/>
+    <text x="1175" y="549" text-anchor="middle" fill="#b9c9dc" font-size="21" font-weight="650">SCORING PERMUTATIONS…</text>
+  </g>
+  <g class="solved">
+    <rect x="1010" y="512" width="330" height="56" rx="28" fill="#173c30" stroke="#48d69b" stroke-width="2"/>
+    <text x="1175" y="549" text-anchor="middle" fill="#71e6b5" font-size="21" font-weight="750">ORDER RECOVERED ✓</text>
+  </g>
+
+  <!-- ============ predicted order row ============ -->
+  <text x="70" y="656" class="label">PREDICTED ORDER</text>
+  <text x="1530" y="656" text-anchor="end" class="hint">A → B → C → D</text>
+
+  <!-- frame A -->
+  <g class="out out-1">
+    <rect x="70" y="680" width="320" height="200" rx="18" class="frame" stroke="#3d6b8f"/>
+    <path d="M70 808 Q150 758 230 808 Q310 763 390 808" class="hill"/>
+    <path d="M88 818 H372" class="horizon"/>
+    <circle cx="150" cy="804" r="26" fill="#7d5f38"/>
+    <circle cx="352" cy="712" r="21" fill="#25c987"/>
+    <text x="352" y="720" text-anchor="middle" fill="#07111f" font-size="22" font-weight="800">1</text>
+    <text x="98" y="724" class="tag">A</text>
+  </g>
+  <!-- frame B -->
+  <g class="out out-2">
+    <rect x="450" y="680" width="320" height="200" rx="18" class="frame" stroke="#3d6b8f"/>
+    <path d="M450 808 Q530 758 610 808 Q690 763 770 808" class="hill"/>
+    <path d="M468 818 H752" class="horizon"/>
+    <circle cx="610" cy="780" r="26" fill="#a8763a"/>
+    <circle cx="732" cy="712" r="21" fill="#25c987"/>
+    <text x="732" y="720" text-anchor="middle" fill="#07111f" font-size="22" font-weight="800">2</text>
+    <text x="478" y="724" class="tag">B</text>
+  </g>
+  <!-- frame C -->
+  <g class="out out-3">
+    <rect x="830" y="680" width="320" height="200" rx="18" class="frame" stroke="#3d6b8f"/>
+    <path d="M830 808 Q910 758 990 808 Q1070 763 1150 808" class="hill"/>
+    <path d="M848 818 H1132" class="horizon"/>
+    <circle cx="990" cy="753" r="26" fill="#e08b34"/>
+    <circle cx="1112" cy="712" r="21" fill="#25c987"/>
+    <text x="1112" y="720" text-anchor="middle" fill="#07111f" font-size="22" font-weight="800">3</text>
+    <text x="858" y="724" class="tag">C</text>
+  </g>
+  <!-- frame D -->
+  <g class="out out-4">
+    <rect x="1210" y="680" width="320" height="200" rx="18" class="frame" stroke="#3d6b8f"/>
+    <path d="M1210 808 Q1290 758 1370 808 Q1450 763 1530 808" class="hill"/>
+    <path d="M1228 818 H1512" class="horizon"/>
+    <circle cx="1450" cy="733" r="26" fill="#f49b32" filter="url(#glow)"/>
+    <circle cx="1492" cy="712" r="21" fill="#25c987"/>
+    <text x="1492" y="720" text-anchor="middle" fill="#07111f" font-size="22" font-weight="800">4</text>
+    <text x="1238" y="724" class="tag">D</text>
+  </g>
+</svg>
