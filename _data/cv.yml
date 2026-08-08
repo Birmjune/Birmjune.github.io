@@ -14,6 +14,8 @@
     - title: B.S. in Computer Science and Engineering
       institution: Seoul National University, South Korea
       year: 2024 - present
+      description:
+        - "Cumulative GPA: 4.24 / 4.3 &nbsp;·&nbsp; Major GPA: 4.26 / 4.3"
     - title: Seoul Science High School
       institution: Seoul, South Korea
       year: 2021 - 2023
@@ -57,4 +59,4 @@
         - Optimizing AI at various stages (training, inference and serving, model compression and quantization, AI compilers, systems software, and hardware acceleration). Currently applied to foundation models and time series modeling.
     - title: AI in the Physical World
       items:
-        - Putting the resulting models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
+        - Putting those optimized models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
