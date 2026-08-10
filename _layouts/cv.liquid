@@ -31,14 +31,18 @@ layout: default
       {% endif %}
     </div>
 
-    <nav class="cv-toc" aria-label="Jump to a section">
+  </header>
+
+  <nav class="cv-toc" aria-label="Jump to a section">
+    <p class="cv-toc-title">Sections</p>
+    <ul>
       {% for entry in site.data.cv %}
         {% unless entry.title == 'General Information' %}
-          <a href="#{{ entry.title | slugify }}">{{ entry.title }}</a>
+          <li><a href="#{{ entry.title | slugify }}">{{ entry.title }}</a></li>
         {% endunless %}
       {% endfor %}
-    </nav>
-  </header>
+    </ul>
+  </nav>
 
   {% for entry in site.data.cv %}
     {% unless entry.title == 'General Information' %}
@@ -64,3 +68,33 @@ layout: default
     {% endunless %}
   {% endfor %}
 </div>
+
+<script>
+  // Highlight the sidebar link for whichever section is currently in view.
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.cv-toc a[href^="#"]'));
+    if (!links.length) return;
+
+    var targets = links
+      .map(function (link) {
+        var anchor = document.getElementById(link.hash.slice(1));
+        return anchor ? { link: link, section: anchor.closest('.cv-section') || anchor } : null;
+      })
+      .filter(Boolean);
+    if (!targets.length) return;
+
+    function update() {
+      var current = targets[0];
+      targets.forEach(function (t) {
+        if (t.section.getBoundingClientRect().top <= 140) current = t;
+      });
+      links.forEach(function (link) {
+        link.classList.toggle('is-active', link === current.link);
+      });
+    }
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+  })();
+</script>

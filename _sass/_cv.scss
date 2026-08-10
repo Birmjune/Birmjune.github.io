@@ -13,18 +13,10 @@ $cv-label: #9a6b3f;
 $cv-accent: #2f7a75;
 $cv-hairline: rgba(72, 63, 50, 0.13);
 
-// The layout below manages its own width, so let it out of the narrow
-// site-wide content box.
-body.cv-page .container {
-  max-width: none;
-}
-
+// Sits in the site-wide content box (930px), same measure as news/projects.
 .cv-landing {
   position: relative;
-  left: 50%;
-  width: min(1120px, calc(100vw - 32px));
   margin: -0.75rem 0 4rem;
-  transform: translateX(-50%);
 }
 
 /*****************************
@@ -125,17 +117,23 @@ body.cv-page .container {
 }
 
 // Jump links to every section, in the same small-caps key as the section
-// labels. Sits under the hero buttons rather than in a sidebar so the page
-// keeps the full-width rhythm of the homepage.
+// labels. Wide viewports park them in a fixed rail to the right of the content
+// column so they stay reachable while scrolling; narrower ones fall back to a
+// wrapping row under the hero.
 .cv-toc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.4rem;
-  margin-top: 1.7rem;
-  padding-top: 1.3rem;
-  border-top: 1px solid $cv-hairline;
+  margin-top: 1.6rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
   a {
+    display: block;
     color: $cv-muted;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 0.78rem;
@@ -144,10 +142,74 @@ body.cv-page .container {
     text-decoration: none;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &.is-active {
       color: $cv-accent;
       text-decoration: none;
     }
+  }
+}
+
+.cv-toc-title {
+  display: none;
+}
+
+// Content column is 930px wide and centred, so the rail starts 465px + a gutter
+// from the middle and takes whatever room is left, up to 170px.
+@media (min-width: 1280px) {
+  .cv-toc {
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 481px);
+    z-index: 5;
+    width: min(170px, calc(50vw - 497px));
+    max-height: 68vh;
+    margin-top: 0;
+    padding-left: 0.95rem;
+    overflow-y: auto;
+    border-left: 1px solid $cv-hairline;
+    transform: translateY(-50%);
+
+    ul {
+      display: block;
+    }
+
+    li + li {
+      margin-top: 0.62rem;
+    }
+
+    a {
+      position: relative;
+      font-size: 0.72rem;
+      line-height: 1.35;
+
+      // Marks the section currently in view, sitting on the rail's hairline.
+      &::before {
+        position: absolute;
+        top: 0.28rem;
+        left: -1.2rem;
+        width: 3px;
+        height: 0.62rem;
+        background-color: $cv-accent;
+        opacity: 0;
+        content: "";
+      }
+
+      &.is-active::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .cv-toc-title {
+    display: block;
+    margin: 0 0 0.85rem;
+    color: $cv-label;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 }
 
@@ -312,10 +374,6 @@ a.anchor {
 }
 
 @media (max-width: 640px) {
-  .cv-landing {
-    width: min(100%, calc(100vw - 24px));
-  }
-
   .cv-hero {
     padding: 2.4rem 0 2rem;
   }
