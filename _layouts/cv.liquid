@@ -30,6 +30,14 @@ layout: default
         <a class="cv-action" href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
       {% endif %}
     </div>
+
+    <nav class="cv-toc" aria-label="Jump to a section">
+      {% for entry in site.data.cv %}
+        {% unless entry.title == 'General Information' %}
+          <a href="#{{ entry.title | slugify }}">{{ entry.title }}</a>
+        {% endunless %}
+      {% endfor %}
+    </nav>
   </header>
 
   {% for entry in site.data.cv %}
