@@ -18,16 +18,31 @@
         - "Cumulative GPA: 4.24 / 4.3 &nbsp;·&nbsp; Major GPA: 4.27 / 4.3"
     - title: Seoul Science High School
       institution: Seoul, South Korea
-      year: 2021 - 2023
+      year: Mar 2021 - Feb 2023
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: AI Optimization
+      items:
+        - Optimizing AI across training, inference and serving, compression and quantization, AI compilers, and hardware acceleration; currently applied to foundation models and time series modeling.
+    - title: AI in the Physical World
+      items:
+        - Putting those optimized models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
 
 - title: Experience
   type: time_table
   contents:
     - title: Research Intern
       institution: Machine Learning Lab (Prof. Hyun Oh Song), Seoul National University
-      year: 2025 - present
+      year: Dec 2025 - present
       description:
-        - Research on time series foundation models.
+        - Researching a dynamic programming based dynamic decoding process for time series foundation models.
+
+- title: Projects
+  type: list
+  contents:
+    - 'SNU AI Challenge 2026, Image2Answer, Easy ARC-AGI Solver, and more on the <a href="/projects/">projects page</a>.'
 
 - title: Honors and Awards
   type: time_table
@@ -43,20 +58,22 @@
       items:
         - National Science &amp; Technology Scholarship (Full Scholarship)
         - 8th overall (Team division), Simon Marais Mathematics Competition
-    - year: "~2023"
+    - year: 2023
       items:
         - Best Award, Graduation Thesis in Mathematics (Seoul Science High School)
+    - year: 2022
+      items:
         - Gold Medal, Korean Mathematical Olympiad (KMO), high school division
         - Best Award, R&E Research Competition in Mathematics (Seoul Science High School)
         - Excellence Award, Research Project Competition in Mathematics (Seoul Science High School)
+    - year: 2021
+      items:
         - Excellence Award, Research Project Competition in Physics (Seoul Science High School)
 
-- title: Research Interests
-  type: nested_list
+- title: Skills
+  type: map
   contents:
-    - title: AI Optimization
-      items:
-        - Optimizing AI at various stages (training, inference and serving, model compression and quantization, AI compilers, systems software, and hardware acceleration). Currently applied to foundation models and time series modeling.
-    - title: AI in the Physical World
-      items:
-        - Putting those optimized models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
+    - name: Programming
+      value: Python, PyTorch, C / C++, Shell
+    - name: Languages
+      value: Korean (native), English

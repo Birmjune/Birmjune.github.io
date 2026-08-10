@@ -24,6 +24,8 @@ layout: default
             {% case entry.type %}
               {% when 'map' %}
                 {% include cv/map.liquid %}
+              {% when 'list' %}
+                {% include cv/list.liquid %}
               {% when 'nested_list' %}
                 {% include cv/nested_list.liquid %}
               {% when 'time_table' %}
