@@ -5,7 +5,5 @@ title: CV
 nav: true
 nav_order: 5
 cv_pdf: /assets/pdf/cv.pdf
-description: My curriculum vitae. Use the button above to download the PDF.
-toc:
-  sidebar: left
+description: Education, research, projects, and awards. The PDF is typeset from assets/pdf/cv.tex.
 ---

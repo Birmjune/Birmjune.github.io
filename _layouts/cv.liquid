@@ -1,39 +1,58 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {{ page.title }}
+
+{% assign display_name = site.first_name | append: ' ' | append: site.last_name | strip %}
+{% assign general = site.data.cv | where: 'title', 'General Information' | first %}
+{% for c in general.contents %}
+  {% if c.name == 'Location' %}{% assign cv_location = c.value %}{% endif %}
+  {% if c.name == 'Email' %}{% assign cv_email = c.value %}{% endif %}
+{% endfor %}
+
+<div class="cv-landing">
+  <header class="cv-hero">
+    <p class="cv-kicker">Curriculum vitae</p>
+    <h1>{{ display_name }}</h1>
+    {% if page.description %}<p class="cv-subtitle">{{ page.description }}</p>{% endif %}
+
+    {% if cv_location or cv_email %}
+      <div class="cv-meta">
+        {% if cv_location %}<span>{{ cv_location }}</span>{% endif %}
+        {% if cv_email %}<a href="mailto:{{ cv_email }}">{{ cv_email }}</a>{% endif %}
+      </div>
+    {% endif %}
+
+    <div class="cv-actions">
       {% if page.cv_pdf %}
-        <a href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer" class="float-right" aria-label="Download CV as PDF">
-          <i class="fa-solid fa-file-pdf"></i>
-        </a>
+        <a class="cv-action cv-action-primary" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">Download PDF</a>
       {% endif %}
-    </h1>
-    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+      {% if site.data.socials.github_username %}
+        <a class="cv-action" href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      {% endif %}
+    </div>
   </header>
 
-  <article>
-    <div class="cv">
-      {% for entry in site.data.cv %}
+  {% for entry in site.data.cv %}
+    {% unless entry.title == 'General Information' %}
+      <section class="cv-section">
         <a class="anchor" id="{{ entry.title | slugify }}"></a>
-        <div class="card mt-3 p-3">
-          <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-          <div>
-            {% case entry.type %}
-              {% when 'map' %}
-                {% include cv/map.liquid %}
-              {% when 'list' %}
-                {% include cv/list.liquid %}
-              {% when 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% when 'time_table' %}
-                {% include cv/time_table.liquid %}
-            {% endcase %}
-          </div>
+        <div class="cv-section-heading">
+          <p class="cv-section-label">{{ entry.label }}</p>
+          <h2>{{ entry.title }}</h2>
         </div>
-      {% endfor %}
-    </div>
-  </article>
+        <div class="cv-section-body">
+          {% case entry.type %}
+            {% when 'map' %}
+              {% include cv/map.liquid %}
+            {% when 'list' %}
+              {% include cv/list.liquid %}
+            {% when 'nested_list' %}
+              {% include cv/nested_list.liquid %}
+            {% when 'time_table' %}
+              {% include cv/time_table.liquid %}
+          {% endcase %}
+        </div>
+      </section>
+    {% endunless %}
+  {% endfor %}
 </div>

@@ -1,29 +1,23 @@
-<table class="table table-cv table-sm table-borderless table-responsive">
+{% comment %}
+  Name/value pairs (skills, contact details) on the same two-column grid.
+{% endcomment %}
+
+<dl class="cv-entries cv-map">
   {% for content in entry.contents %}
-    <tr>
-      <td class="p-1 pr-2 font-weight-bold">
-        <b>{{ content.name }}</b>
-      </td>
-      {% if content.value %}
-        <td class="p-1 pl-2 font-weight-light text">{{ content.value }}</td>
-      {% endif %}
-      {% if content.links %}
-        <td class="p-1 pl-2 font-weight-light text">
-          <div class="container-pdf">
+    <div class="cv-entry">
+      <dt class="cv-entry-meta">{{ content.name }}</dt>
+      <dd class="cv-entry-body">
+        {% if content.value %}{{ content.value }}{% endif %}
+        {% if content.links %}
+          <div class="cv-links">
             {% for item in content.links %}
               {% if item.link %}
-                <div class="container-link-button">
-                  {% if item.name %}
-                    <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">{{ item.name }}</a>
-                  {% else %}
-                    <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">doc</a>
-                  {% endif %}
-                </div>
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name | default: 'doc' }}</a>
               {% endif %}
             {% endfor %}
           </div>
-        </td>
-      {% endif %}
-    </tr>
+        {% endif %}
+      </dd>
+    </div>
   {% endfor %}
-</table>
+</dl>

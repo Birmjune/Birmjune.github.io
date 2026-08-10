@@ -33,14 +33,6 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      - name: Generate CV PDF
-        run: |
-          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium-browser || command -v chromium)
-          "$CHROME" --headless --disable-gpu --no-sandbox --no-pdf-header-footer \
-            --virtual-time-budget=15000 --run-all-compositor-stages-before-draw \
-            --print-to-pdf="$GITHUB_WORKSPACE/_site/assets/pdf/cv.pdf" \
-            "file://$GITHUB_WORKSPACE/_site/cv_print/index.html"
-
       - name: Deploy
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

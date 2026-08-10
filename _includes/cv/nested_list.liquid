@@ -1,16 +1,22 @@
-<ul class="card-text font-weight-light list-group list-group-flush">
+{% comment %}
+  Grouped items (e.g. research interests): the group name heads the right-hand
+  column so long titles are free to wrap.
+{% endcomment %}
+
+<div class="cv-entries">
   {% for content in entry.contents %}
-    <li class="list-group-item">
-      <h5 class="font-italic">{{ content.title }}</h5>
-      {% if content.items %}
-        <ul class="subitems">
-          {% for subitem in content.items %}
-            <li>
-              <span class="subitem">{{ subitem }}</span>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </li>
+    <div class="cv-entry">
+      <div class="cv-entry-meta"></div>
+      <div class="cv-entry-body">
+        {% if content.title %}<h3>{{ content.title }}</h3>{% endif %}
+        {% if content.items %}
+          <ul class="cv-list">
+            {% for subitem in content.items %}
+              <li>{{ subitem }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
   {% endfor %}
-</ul>
+</div>

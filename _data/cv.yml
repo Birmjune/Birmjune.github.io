@@ -9,6 +9,7 @@
       value: johnbie0627@gmail.com
 
 - title: Education
+  label: Background
   type: time_table
   contents:
     - title: B.S. in Computer Science and Engineering, Kim Jaechul AI Class (from Sep 2026)
@@ -21,6 +22,7 @@
       year: Mar 2021 - Feb 2023
 
 - title: Research Interests
+  label: Interests
   type: nested_list
   contents:
     - title: AI Optimization
@@ -31,6 +33,7 @@
         - Putting those optimized models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
 
 - title: Experience
+  label: Work
   type: time_table
   contents:
     - title: Research Intern
@@ -40,11 +43,13 @@
         - Researching a dynamic programming based dynamic decoding process for time series foundation models.
 
 - title: Projects
+  label: Selected work
   type: list
   contents:
     - 'SNU AI Challenge 2026, Image2Answer, Easy ARC-AGI Solver, and more on the <a href="/projects/">projects page</a>.'
 
 - title: Honors and Awards
+  label: Recognition
   type: time_table
   contents:
     - year: 2026
@@ -53,11 +58,11 @@
     - year: 2025
       items:
         - Entrepreneur Award (1st in business idea), 3rd SKYST Joint Hackathon
-        - Finalist, Samsung Collegiate Programming Challenge (AI track)
+        - Finalist (top 41 of 1,483), Samsung Collegiate Programming Challenge (AI track)
     - year: 2024
       items:
         - National Science &amp; Technology Scholarship (Full Scholarship)
-        - 8th overall (Team division), Simon Marais Mathematics Competition
+        - 8th of 275 pairs, Simon Marais Mathematics Competition (Pairs division, East)
     - year: 2023
       items:
         - Best Award, Graduation Thesis in Mathematics (Seoul Science High School)
@@ -71,6 +76,7 @@
         - Excellence Award, Research Project Competition in Physics (Seoul Science High School)
 
 - title: Skills
+  label: Toolkit
   type: map
   contents:
     - name: Programming
