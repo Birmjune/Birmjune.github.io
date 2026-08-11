@@ -159,16 +159,16 @@ $cv-hairline: rgba(72, 63, 50, 0.13);
 @media (min-width: 1280px) {
   .cv-toc {
     position: fixed;
-    top: 50%;
+    // Sits just under the fixed navbar rather than centred on the viewport.
+    top: 8.5rem;
     left: calc(50% + 481px);
     z-index: 5;
     width: min(170px, calc(50vw - 497px));
-    max-height: 68vh;
+    max-height: calc(100vh - 11rem);
     margin-top: 0;
     padding-left: 0.95rem;
     overflow-y: auto;
     border-left: 1px solid $cv-hairline;
-    transform: translateY(-50%);
 
     ul {
       display: block;
@@ -366,11 +366,13 @@ $cv-hairline: rgba(72, 63, 50, 0.13);
  * Anchors and small screens
  *****************************/
 
+// Jump targets stop clear of the fixed navbar (~66px) with room to breathe, so
+// the section heading is never tucked under the header.
 a.anchor {
   display: block;
   position: relative;
-  top: -50px;
   visibility: hidden;
+  scroll-margin-top: 110px;
 }
 
 @media (max-width: 640px) {
