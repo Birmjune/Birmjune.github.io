@@ -71,6 +71,13 @@ h1, h2, h3, h4, h5, h6,
   .navbar-nav .nav-item.active > .nav-link {
     color: #2f7a75;
   }
+
+  // Home now leads the nav list instead of sitting in the brand slot; it keeps
+  // the brand's heavier weight so it still reads as the anchor of the row.
+  .navbar-nav .nav-item-home .nav-link {
+    font-size: 1.18rem;
+    font-weight: 700;
+  }
 }
 
 .home-landing {
