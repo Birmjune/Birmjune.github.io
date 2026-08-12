@@ -11,6 +11,9 @@
 
 \documentclass[letterpaper,10pt]{article}
 
+% Loaded before fontenc so the T1 fonts get CMaps: without it the fi/ffl
+% ligatures come out as garbage when the PDF text is copied or parsed.
+\usepackage{cmap}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -173,8 +176,6 @@
   \award{Best Award, Graduation Thesis in Mathematics, Seoul Science High School}{2023}
   \award{Gold Medal, Korean Mathematical Olympiad (KMO), high school division}{2022}
   \award{Best Award, R\&E Research Competition in Mathematics, Seoul Science High School}{2022}
-  \award{Excellence Award, Research Project Competition in Mathematics, Seoul Science High School}{2022}
-  \award{Excellence Award, Research Project Competition in Physics, Seoul Science High School}{2021}
 \end{resbody}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skills and languages %%%%%%%%%%%%%%%%%%%%%%%%%%%
