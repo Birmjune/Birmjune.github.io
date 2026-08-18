@@ -25,12 +25,12 @@
   label: Interests
   type: nested_list
   contents:
-    - title: AI Optimization
+    - title: Efficient AI
       items:
-        - Optimizing AI across training, inference and serving, compression and quantization, AI compilers, and hardware acceleration; currently applied to foundation models and time series modeling.
+        - Making efficient AI models, across inference time, compression and quantization, AI compilers, and hardware acceleration; currently applied to foundation models and time series modeling.
     - title: AI in the Physical World
       items:
-        - Putting those optimized models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
+        - Putting those efficient models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
 
 - title: Experience
   label: Work
