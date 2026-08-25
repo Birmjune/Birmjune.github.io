@@ -51,16 +51,16 @@
       description:
         - Given a caption describing a storyline and four shuffled frames from that story, predict each frame's position in the correct temporal order.
         - Finalist, 10th of 206 teams.
-    - title: '<a href="https://github.com/CSEneversleep/cns-next">Afterglow: Event Photo Collection and Highlight Video</a>'
-      year: Sep 2025
-      description:
-        - Collects event photos through a QR code and replays them as a highlight video.
-        - Built with a four-person team at the 3rd SKYST Joint Hackathon.
     - title: '<a href="https://github.com/Birmjune/Image2Answer-4optionMCQ">Image2Answer: 4-Option MCQ Solver</a>'
       year: Aug 2025
       description:
         - A vision-language pipeline that reads a question image and predicts the correct choice among the four options.
         - 'Samsung Collegiate Programming Challenge (AI track): one of 41 finalists out of 1,483 entrants.'
+    - title: '<a href="https://github.com/CSEneversleep/cns-next">Afterglow: Event Photo Collection and Highlight Video</a>'
+      year: May 2025
+      description:
+        - Collects event photos through a QR code and replays them as a highlight video.
+        - Built with a four-person team at the 3rd SKYST Joint Hackathon.
     - title: '<a href="https://github.com/Birmjune/Easy-ARC-AGI-solver">Easy ARC-AGI Challenge Solver</a>'
       year: Spring 2025
       description:
