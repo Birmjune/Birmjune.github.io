@@ -54,7 +54,7 @@
     - title: '<a href="https://github.com/CSEneversleep/cns-next">Afterglow: Event Photo Collection and Highlight Video</a>'
       year: Sep 2025
       description:
-        - Collects photos from everyone at an event through a QR code and replays them as a gallery, a slideshow, and an automatically generated highlight video.
+        - Collects event photos through a QR code and replays them as a highlight video.
         - Built with a four-person team at the 3rd SKYST Joint Hackathon.
     - title: '<a href="https://github.com/Birmjune/Image2Answer-4optionMCQ">Image2Answer: 4-Option MCQ Solver</a>'
       year: Aug 2025
