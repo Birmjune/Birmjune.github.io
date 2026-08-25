@@ -10,7 +10,7 @@ github: https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed
 
 Team **DeepRed**'s entry to the [SNU AI Challenge 2026](https://snuaichallenge.github.io/),
 hosted by Seoul National University and its Graduate School of Data Science.
-We reached the finals as one of 12 teams out of 206, and placed 10th overall.
+We reached the finals and placed 10th of 206 teams.
 
 **Task.** Given a natural-language sentence describing a storyline and four
 shuffled frames from that story, predict the position of each frame in the
