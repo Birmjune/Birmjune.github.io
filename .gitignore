@@ -7,3 +7,11 @@ node_modules/
 vendor/
 .DS_Store
 .idea/
+
+# LaTeX build artifacts from assets/pdf/cv.tex (only cv.pdf is committed)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
