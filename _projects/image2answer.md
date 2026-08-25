@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Image2Answer: 4-Option MCQ Solver"
-description: A CLIP-then-VLM cascade for image multiple-choice questions, built under a 3B parameter ceiling. One of 41 finalists out of 1,483 entrants at SCPC 2025.
+description: A CLIP-then-VLM cascade for image multiple-choice questions. One of 41 finalists out of 1,483 entrants at SCPC 2025.
 img: assets/img/projects/image2answer-demo.png
 importance: 3
 category: vision-language

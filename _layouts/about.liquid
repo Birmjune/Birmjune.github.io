@@ -67,7 +67,7 @@ layout: default
     </div>
     {% if site.projects != blank %}
       <div class="home-work-list">
-        {% for project in project_items limit: 3 %}
+        {% for project in project_items limit: 4 %}
           <article class="home-work-item">
             <a href="{{ project.url | relative_url }}">
               <span>{{ project.category | default: 'project' }}</span>
