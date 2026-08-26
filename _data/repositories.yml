@@ -1,14 +1,14 @@
+# Feeds the al-folio repository cards. Nothing renders these yet -- no page in
+# _pages/ includes _includes/repository/. Kept in sync with the projects so that
+# turning a repositories page on never shows someone else's work as mine.
+
 github_users:
-  - torvalds
-  - alshedivat
+  - Birmjune
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Birmjune/2026_SNU_AI_Challenge_DeepRed
+  - Birmjune/Easy-ARC-AGI-solver
+  - Birmjune/Image2Answer-4optionMCQ
+  - CSEneversleep/cns-next

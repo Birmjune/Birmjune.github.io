@@ -9,9 +9,9 @@ nav_order: 2
 
 <p>
   I'm an undergraduate getting started in research. I'm interested in
-  <strong>making efficient AI models</strong>, across inference time, model
-  compression and quantization, AI compilers, systems software, and hardware
-  acceleration. I'm also interested in <strong>putting those efficient models to work
+  <strong>making efficient AI models</strong> across various levels of the stack:
+  inference-time methods, model compression and quantization, AI compilers, and
+  hardware acceleration. I'm also interested in <strong>putting those efficient models to work
   in the physical world</strong>, like robotics, where latency, memory, and power are
   real constraints.
 </p>
@@ -23,4 +23,6 @@ nav_order: 2
   <strong>time series foundation models</strong>.
 </p>
 
-<p>No publications yet. This page will be updated as my research matures.</p>
+<h2>Publications</h2>
+
+<p>None yet. They will be listed here as they appear.</p>

@@ -12,10 +12,11 @@
   label: Background
   type: time_table
   contents:
-    - title: B.S. in Computer Science and Engineering, Kim Jaechul AI Class (from Sep 2026)
+    - title: B.S. in Computer Science and Engineering
       institution: Seoul National University, South Korea
       year: Mar 2024 - present
       description:
+        - Kim Jaechul AI Class, from Sep 2026
         - "Cumulative GPA: 4.24 / 4.3 &nbsp;·&nbsp; Major GPA: 4.27 / 4.3"
     - title: Seoul Science High School
       institution: Seoul, South Korea
@@ -27,7 +28,7 @@
   contents:
     - title: Efficient AI
       items:
-        - Making efficient AI models, across inference time, compression and quantization, AI compilers, and hardware acceleration; currently applied to foundation models and time series modeling.
+        - "Making efficient AI models across various levels of the stack: inference-time methods, model compression and quantization, AI compilers, and hardware acceleration."
     - title: AI in the Physical World
       items:
         - Putting those efficient models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
@@ -60,9 +61,9 @@
       year: May 2025
       description:
         - Collects event photos through a QR code and replays them as a highlight video.
-        - Built with a four-person team at the 3rd SKYST Joint Hackathon.
+        - Built with a four-person team at the 3rd SKYST Joint Hackathon; Entrepreneur Award (1st in business idea).
     - title: '<a href="https://github.com/Birmjune/Easy-ARC-AGI-solver">Easy ARC-AGI Challenge Solver</a>'
-      year: Spring 2025
+      year: Apr 2025 - Jun 2025
       description:
         - Infers the rule behind a few example grid pairs and applies it to an unseen input, for grids up to 10&times;10.
         - Private score 63/100.
