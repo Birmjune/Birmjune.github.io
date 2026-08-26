@@ -23,6 +23,7 @@ nav_order: 2
   <strong>time series foundation models</strong>.
 </p>
 
-<h2>Publications</h2>
-
-<p>None yet. They will be listed here as they appear.</p>
+<div class="publications">
+  <h2>Publications</h2>
+  <p>None yet. They will be listed here as they appear.</p>
+</div>
