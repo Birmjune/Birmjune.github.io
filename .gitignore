@@ -15,3 +15,6 @@ vendor/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Reference CVs kept locally only -- never published with the site
+cv_example*.pdf
