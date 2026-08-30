@@ -12,8 +12,8 @@ Built over the **3rd SKYST Joint Hackathon** with team *CSE never sleeps* (four
 people). The judges gave it the **Entrepreneur Award**, first place on the
 business-idea criterion.
 
-The hackathon's brief was unusual: listen to 신해철's *그대에게* and implement,
-in code, the image it puts in your head.
+The hackathon's brief: listen to 신해철's *그대에게* and implement, in code,
+the image it puts in your head.
 
 We took the line *"이 세상 어느 곳에서도
 나는 그대 숨결을 느낄 수 있어요"* and read it as a problem about memory: an event
@@ -35,10 +35,9 @@ straight from their phone, with no account and no app. The photos land in one
 shared gallery, viewable as a grid, as a slideshow, or as a highlight video the
 app generates on its own.
 
-## The video is a recording of the page
+## Highlight video
 
-The interesting part is how the highlight video gets made. There is no video
-encoder and no rendering pipeline anywhere in the stack:
+There is no video encoder and no rendering pipeline anywhere in the stack:
 
 1. **GPT-4o tags every photo.** Each uploaded image is sent to the model, which
    returns seven keywords as strict JSON. The client is set to retry with
@@ -53,10 +52,9 @@ encoder and no rendering pipeline anywhere in the stack:
    `captureStream(30)` plus `MediaRecorder` capture the live DOM node into a
    webm the browser hands straight back to the user.
 
-Turning "generate a video" into "animate a page and press record" is the right
-trade under a hackathon clock. It removes an entire class of infrastructure
-(encoders, workers, a job queue, storage for renders), and the output is
-indistinguishable to anyone watching it.
+Recording the page instead of encoding a video removed an entire class of
+infrastructure: encoders, workers, a job queue, storage for renders. That
+mattered under a hackathon clock.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/afterglow-slide.png" class="img-fluid rounded z-depth-1" %}
 

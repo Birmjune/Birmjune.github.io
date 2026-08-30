@@ -29,20 +29,19 @@ nothing else. This solver targets a tractable slice of the benchmark: grids up t
 ## Approach
 
 The solver is a fine-tuned **Llama-3.1-8B-Instruct**, loaded in 4-bit through
-unsloth. Four things do the work:
+unsloth.
 
-- **One cell, one token.** Grids are serialized as text, so tokenization decides
-  whether the model can even see the geometry. We prune the embedding down to
-  single-character tokens, which stops the tokenizer from merging runs of cells
-  into arbitrary multi-character pieces and keeps row and column positions
-  aligned across the sequence.
-- **Data, where there is none.** A rule in ARC is defined by two or three
+- **Single-character tokens.** Grids are serialized as text, so tokenization
+  decides whether the model can even see the geometry. We prune the embedding
+  down to single-character tokens, which stops the tokenizer from merging runs
+  of cells into arbitrary multi-character pieces and keeps row and column
+  positions aligned across the sequence.
+- **Synthetic training data.** A rule in ARC is defined by two or three
   demonstrations, which is not enough to fine-tune on. The loader takes the
   Re-ARC route instead: each source file holds many procedurally generated
   instances of a single rule, and it resamples them into 200 synthetic tasks per
   file, each one 6 demonstration pairs plus a held-out test pair. The model
-  therefore meets the same rule across many different concrete grids rather than
-  memorizing a handful.
+  therefore sees the same rule across many different grids instead of a handful.
 - **Symmetry augmentation.** Every task is expanded under transposition,
   rotation, color permutation, and shuffling of the demonstration order. All four
   preserve the underlying rule, so they multiply a tiny dataset without teaching
@@ -50,9 +49,8 @@ unsloth. Four things do the work:
   color or orientation.
 - **Test-time training.** Each puzzle's own demonstrations become a
   leave-one-out training set, and the model takes a short fine-tune on them
-  before it answers. This is the step that fits the ARC setting: the rule lives
-  in those two or three pairs, so the cheapest way to learn it is to train on
-  them directly rather than hope one forward pass generalizes.
+  before it answers. The rule lives in those two or three pairs, so training on
+  them directly is cheaper than hoping one forward pass generalizes.
 - **Majority vote over augmentations.** At inference the same puzzle is solved
   under several augmentations and the answers are voted, which cancels the
   orientation- and color-specific mistakes a single pass makes.

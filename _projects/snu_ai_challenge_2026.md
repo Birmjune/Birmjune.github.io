@@ -65,9 +65,9 @@ Training ran on one H100 80GB; inference on one RTX 3090.
 
 ## Reproducibility
 
-The repository is a reproduction package rather than a research dump: pinned
-base-model revision, SHA256-verified adapter releases, and a `verify_package.py`
-that checks manifest integrity, label-coordinate consistency, split hygiene, and
+The repository is set up as a reproduction package: pinned base-model revision,
+SHA256-verified adapter releases, and a `verify_package.py` that checks manifest
+integrity, label-coordinate consistency, split hygiene, and
 weight identity before any GPU time is spent.
 
 Code and instructions on [GitHub](https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed).
