@@ -13,8 +13,10 @@ people). The judges gave it the **Entrepreneur Award**, first place on the
 business-idea criterion.
 
 The hackathon's brief was unusual: listen to 신해철's *그대에게* and implement,
-in code, the image it puts in your head. We took the line *"이 세상 어느 곳에서도
-나는 그대 숨결을 느낄 수 있어요"* and read it as a problem about memory — an event
+in code, the image it puts in your head.
+
+We took the line *"이 세상 어느 곳에서도
+나는 그대 숨결을 느낄 수 있어요"* and read it as a problem about memory: an event
 is vivid while it happens and faint a month later, and the photos that would fix
 that are scattered across everyone's phones.
 
@@ -29,9 +31,9 @@ that are scattered across everyone's phones.
 ## Flow
 
 Create an event, and it gets a QR code. Anyone at the event scans it and uploads
-straight from their phone — no account, no app. The photos land in one shared
-gallery, viewable as a grid, as a slideshow, or as a highlight video the app
-generates on its own.
+straight from their phone, with no account and no app. The photos land in one
+shared gallery, viewable as a grid, as a slideshow, or as a highlight video the
+app generates on its own.
 
 ## The video is a recording of the page
 
@@ -45,15 +47,15 @@ encoder and no rendering pipeline anywhere in the stack:
 2. **Photos group by keyword.** A photo tagged `햄버거` and `사람` joins both
    buckets, so each keyword becomes a themed slide.
 3. **Each slide lays itself out.** A bucket of *n* photos is shown as a
-   &radic;*n* &times; &radic;*n* grid, rounded down, with the overflow dropped — so
-   the slide always fills cleanly, whatever the count.
+   &radic;*n* &times; &radic;*n* grid, rounded down, with the overflow dropped, so
+   the slide always fills cleanly whatever the count.
 4. **The browser records itself.** framer-motion animates the transitions, and
    `captureStream(30)` plus `MediaRecorder` capture the live DOM node into a
    webm the browser hands straight back to the user.
 
 Turning "generate a video" into "animate a page and press record" is the right
-trade under a hackathon clock: it removes an entire class of infrastructure —
-encoders, workers, a job queue, storage for renders — and the output is
+trade under a hackathon clock. It removes an entire class of infrastructure
+(encoders, workers, a job queue, storage for renders), and the output is
 indistinguishable to anyone watching it.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/afterglow-slide.png" class="img-fluid rounded z-depth-1" %}
@@ -64,11 +66,12 @@ indistinguishable to anyone watching it.
 
 ## My part
 
-I built the **gallery view** — the thumbnail grid and the modal that opens a
-photo full size — the **slideshow** (shared with a teammate), and the
-**star-field background** that runs behind the whole app. The AI highlight-video
-feature was a teammate's; the backend, database, and Git workflow were the team
-lead's.
+I built the **gallery view** (the thumbnail grid and the modal that opens a photo
+full size), the **slideshow** (shared with a teammate), and the **star-field
+background** that runs behind the whole app.
+
+The AI highlight-video feature was a teammate's; the backend, database, and Git
+workflow were the team lead's.
 
 ## Stack
 

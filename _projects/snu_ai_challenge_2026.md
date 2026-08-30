@@ -10,7 +10,8 @@ github: https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed
 
 Team **DeepRed**'s entry to the [SNU AI Challenge 2026](https://snuaichallenge.github.io/),
 hosted by Seoul National University and its Graduate School of Data Science.
-We reached the finals as one of 12 teams out of 206, and placed 10th there.
+We placed 4th of 206 teams on the preliminary accuracy leaderboard, reached the
+finals as one of 12 teams, and finished 10th there.
 
 **Task.** Given a natural-language sentence describing a storyline and four
 shuffled frames from that story, predict the position of each frame in the
@@ -27,30 +28,29 @@ low-level frame cues.
     <a href="https://snuaichallenge.github.io/">SNU AI Challenge 2026 site</a>.
 </div>
 
-The finals scored more than raw accuracy — data utilization (15), model design
+The finals scored more than raw accuracy: data utilization (15), model design
 (15), optimization (10), resource efficiency (10), and infrastructure cost (10)
-all counted alongside the preliminary leaderboard, so the pipeline had to stay
-cheap enough to run on a single consumer GPU.
+all counted alongside the preliminary leaderboard. The pipeline therefore had to
+stay cheap enough to run on a single consumer GPU.
 
 ## Approach
 
 ```text
 Qwen3.6-27B base
-  -> Aug-C training (3 epochs, LoRA)
+  -> augmented training (3 epochs, LoRA)
   -> extra epoch on hard training samples
   -> final adapter
   -> permutation TTA (K = 7)
   -> submission
 ```
 
-- **Two-stage LoRA fine-tuning.** The first stage trains on the augmented
-  ("Aug-C") set for 3 epochs; the epoch-2 adapter then gets one more epoch on a
-  mined hard subset.
-- **What the augmentation does.** Aug-C perturbs each example on both modalities:
-  the frames get reshuffled into fresh permutations, and the caption gets cut into
-  partial sentences. Both weaken the text shortcut — with only a fragment of the
-  caption to work from, the model has to extract the ordering evidence from the
-  images themselves rather than pattern-match on the sentence.
+- **Two-stage LoRA fine-tuning.** The first stage trains on the augmented set for
+  3 epochs; the epoch-2 adapter then gets one more epoch on a mined hard subset.
+- **What the augmentation does.** It perturbs each example on both modalities:
+  the frames get reshuffled into fresh permutations, and the caption gets cut
+  into partial sentences. Both weaken the text shortcut; with only a fragment of
+  the caption to work from, the model has to extract the ordering evidence from
+  the images themselves rather than pattern-match on the sentence.
 - **Hard sample mining.** 1,132 training problems that our earlier models failed
   (276 flipped-to-wrong, 856 consistently wrong) form the second-stage set. The
   package verifies these never intersect validation or test.

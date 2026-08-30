@@ -12,13 +12,13 @@ Submission for the **Samsung Collegiate Programming Challenge (SCPC) 2025, AI
 track**, which reached the finals as one of 41 finalists out of 1,483 entrants.
 
 **Task.** Read an image and a question about it, then pick one of four written
-options. The model must emit a single character — `A`, `B`, `C`, or `D`.
+options. The model must emit a single character: `A`, `B`, `C`, or `D`.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/image2answer-demo.png" class="img-fluid rounded z-depth-1" %}
 
 <div class="caption">
     The worked example from the repo. All four options are plausible reasons to work
-    out, so the text alone cannot separate them — the gym floor in the image is the
+    out, so the text alone cannot separate them; the gym floor in the image is the
     only evidence that picks (A).
 </div>
 
@@ -30,7 +30,7 @@ Two rules defined the problem more than the task did:
 - every public model in it had to have been **released before 2024**.
 
 That rules out reaching for a large modern VLM and calling it done. The budget
-buys roughly one small VLM — and a small VLM asked to answer every question
+buys roughly one small VLM, and a small VLM asked to answer every question
 outright is mediocre at it.
 
 So the pipeline spends its parameters unevenly. A cheap, high-precision model
@@ -47,13 +47,13 @@ between the top two options exceeds 0.4. Otherwise CLIP abstains and returns
 nothing.
 
 This is the load-bearing idea. CLIP alone is a weak MCQ solver, because many
-options are semantically close and it has no notion of a question — but when it
+options are semantically close and it has no notion of a question. But when it
 is *confident and stable under augmentation*, it is right often enough to trust.
 The threshold turns a mediocre classifier into a precise filter.
 
 **2. MobileVLM-1.7B on what's left.** Only the abstained questions reach the VLM,
 which sees the image and a prompt that lists the four options and demands a
-single letter. Decoding is greedy — temperature 0, one beam — since the output is
+single letter. Decoding is greedy (temperature 0, one beam), since the output is
 one token of signal and sampling only adds variance.
 
 **3. Snapping stray answers back.** A 1.7B model does not always obey "answer
