@@ -20,7 +20,7 @@
 % Bold resolves to Latin Modern Roman Demi (a semibold) rather than the heavier
 % bold-extended, which is what gives headings their weight in the reference CV.
 \renewcommand{\bfdefault}{sb}
-\usepackage[letterpaper,top=0.5in,bottom=0.45in,left=0.7in,right=0.7in]{geometry}
+\usepackage[letterpaper,top=0.5in,bottom=0.35in,left=0.7in,right=0.7in]{geometry}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 
@@ -36,7 +36,7 @@
 % line box, so descenders ("Experience", "Projects") cannot push the rule -- and
 % the text below it -- further down than in the other sections.
 \newcommand{\heading}[1]{%
-  \par\vspace{6.5pt}%
+  \par\vspace{5.5pt}%
   {\Large\bfseries\rule{0pt}{10pt}\smash{#1}}\par
   \vspace{4.5pt}%
   \hrule height 0.4pt
@@ -70,7 +70,7 @@
 
 % Flat "item ......... year" line, used for honors. The extra leading keeps the
 % long single-line list from reading as a solid block.
-\newcommand{\award}[2]{\rline{#1}{#2}\vspace{1.6pt}}
+\newcommand{\award}[2]{\rline{#1}{#2}\vspace{1.2pt}}
 
 % Space between two entries of the same section.
 \newcommand{\entrygap}{\vspace{3pt}}
@@ -177,6 +177,7 @@
 \heading{Honors and Awards}
 \begin{resbody}
   \award{Finalist, 10th of 206 teams, SNU AI Challenge 2026}{2026}
+  \award{One of 23 finalist teams (1,603 teams), NEXON Young Programmers Cup (NYPC) 2026, Master track}{2026}
   \award{One of 41 finalists (1,483 entrants), Samsung Collegiate Programming Challenge (AI track)}{2025}
   \award{National Science \& Technology Scholarship (Full Scholarship)}{2024}
   \award{8th of 275 pairs, Simon Marais Mathematics Competition (Pairs division, East)}{2024}
@@ -197,7 +198,7 @@
 
 \vfill
 \begin{center}
-  {\small Last updated: August 10, 2026}
+  {\small Last updated: August 30, 2026}
 \end{center}
 
 \end{document}
