@@ -57,7 +57,7 @@ single letter. Decoding is greedy (temperature 0, one beam), since the output is
 one token of signal and sampling only adds variance.
 
 **3. Snapping stray answers back.** A 1.7B model does not always obey "answer
-with one letter". If the output isn't a bare `A`–`D`, the first character is
+with one letter". If the output isn't a bare `A` ~ `D`, the first character is
 tried; failing that, `all-MiniLM-L6-v2` embeds the generated text and the four
 option strings and picks the nearest option by cosine similarity. This recovers
 answers that were correct in substance but wrong in format.
