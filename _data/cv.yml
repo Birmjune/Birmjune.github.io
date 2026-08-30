@@ -51,7 +51,7 @@
       year: Jul 2026 - Aug 2026
       description:
         - Given a caption describing a storyline and four shuffled frames from that story, predict each frame's position in the correct temporal order.
-        - Finalist, 10th of 206 teams.
+        - One of 12 finalist teams out of 206.
     - title: '<a href="https://github.com/Birmjune/Image2Answer-4optionMCQ">Image2Answer: 4-Option MCQ Solver</a>'
       year: Aug 2025
       description:
@@ -75,7 +75,7 @@
     - year: 2026
       items:
         - One of 23 finalist teams (1,603 teams), NEXON Young Programmers Cup (NYPC) 2026, Master track
-        - Finalist, 10th of 206 teams, SNU AI Challenge 2026
+        - One of 12 finalist teams (206 teams), SNU AI Challenge 2026
     - year: 2025
       items:
         - One of 41 finalists (1,483 entrants), Samsung Collegiate Programming Challenge (AI track)

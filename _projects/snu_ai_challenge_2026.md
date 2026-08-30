@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SNU AI Challenge 2026: Storyline Frame Ordering"
-description: Reordering shuffled story frames to match a natural-language caption. Finalist as team DeepRed, 10th of 206 teams.
+description: Reordering shuffled story frames to match a natural-language caption. Finalist as team DeepRed, one of 12 teams out of 206.
 img: assets/img/projects/snu-ai-challenge-task.png
 importance: 1
 category: vision-language
@@ -10,7 +10,7 @@ github: https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed
 
 Team **DeepRed**'s entry to the [SNU AI Challenge 2026](https://snuaichallenge.github.io/),
 hosted by Seoul National University and its Graduate School of Data Science.
-We reached the finals and placed 10th of 206 teams.
+We reached the finals as one of 12 teams out of 206, and placed 10th there.
 
 **Task.** Given a natural-language sentence describing a storyline and four
 shuffled frames from that story, predict the position of each frame in the
