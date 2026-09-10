@@ -3,7 +3,7 @@ layout: page
 title: Easy ARC-AGI Challenge Solver
 description: An 8B LLM taught to read ARC grids one cell per token, then retrained on each puzzle at test time. 10th of 35 teams, 63/100 private.
 img: assets/img/projects/arc-agi-007bbfb7.svg
-importance: 2
+importance: 3
 category: deep learning
 github: https://github.com/Birmjune/Easy-ARC-AGI-solver
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: LLVM Optimization for a Custom Target Machine
 description: A target-specific LLVM IR optimization pipeline combining custom arithmetic, memory, and loop transformations. 6th of 24 teams.
-importance: 6
+importance: 2
 category: systems
 github: https://github.com/Birmjune/swpp202601-team15
 ---

@@ -3,7 +3,7 @@ layout: page
 title: "Afterglow: Turning an Event's Photos Back Into the Event"
 description: A hackathon web app that collects photos from everyone at an event via QR code and replays them as an auto-generated highlight video. Entrepreneur Award at the 3rd SKYST Joint Hackathon.
 img: assets/img/projects/afterglow-list.png
-importance: 4
+importance: 6
 category: web
 github: https://github.com/CSEneversleep/cns-next
 ---
