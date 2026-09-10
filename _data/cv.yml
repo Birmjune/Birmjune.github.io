@@ -52,6 +52,11 @@
       description:
         - Given a caption describing a storyline and four shuffled frames from that story, predict each frame's position in the correct temporal order.
         - One of 12 finalist teams out of 206.
+    - title: '<a href="https://github.com/Birmjune/swpp202601-team15">LLVM Optimization for a Custom Target Machine</a>'
+      year: May 2026 - Jun 2026
+      description:
+        - An LLVM IR optimization pipeline for a custom target machine, with custom arithmetic, memory, and loop passes ahead of a provided backend.
+        - 6th of 24 teams in the course competition.
     - title: '<a href="https://github.com/Birmjune/Image2Answer-4optionMCQ">Image2Answer: 4-Option MCQ Solver</a>'
       year: Aug 2025
       description:
@@ -67,6 +72,11 @@
       description:
         - Infers the rule behind a few example grid pairs and applies it to an unseen input, for grids up to 10&times;10.
         - Private score 63/100.
+    - title: '<a href="https://github.com/Birmjune/RISC-V_BluespecVerilog">RISC-V CPU in Bluespec</a>'
+      year: Mar 2025 - Jun 2025
+      description:
+        - RISC-V processors in Bluespec SystemVerilog, from a four-cycle non-pipelined CPU to three- and five-stage pipelines and a cached three-stage design.
+        - Control hazards handled with epochs; data hazards with a scoreboard and with forwarding.
 
 - title: Honors and Awards
   label: Recognition
