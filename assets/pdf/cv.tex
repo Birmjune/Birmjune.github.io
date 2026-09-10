@@ -20,7 +20,7 @@
 % Bold resolves to Latin Modern Roman Demi (a semibold) rather than the heavier
 % bold-extended, which is what gives headings their weight in the reference CV.
 \renewcommand{\bfdefault}{sb}
-\usepackage[letterpaper,top=0.5in,bottom=0.35in,left=0.7in,right=0.7in]{geometry}
+\usepackage[letterpaper,top=0.5in,bottom=0.45in,left=0.7in,right=0.7in]{geometry}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 
@@ -36,7 +36,7 @@
 % line box, so descenders ("Experience", "Projects") cannot push the rule -- and
 % the text below it -- further down than in the other sections.
 \newcommand{\heading}[1]{%
-  \par\vspace{5.5pt}%
+  \par\vspace{6.5pt}%
   {\Large\bfseries\rule{0pt}{10pt}\smash{#1}}\par
   \vspace{4.5pt}%
   \hrule height 0.4pt
@@ -70,7 +70,7 @@
 
 % Flat "item ......... year" line, used for honors. The extra leading keeps the
 % long single-line list from reading as a solid block.
-\newcommand{\award}[2]{\rline{#1}{#2}\vspace{1.2pt}}
+\newcommand{\award}[2]{\rline{#1}{#2}\vspace{1.6pt}}
 
 % Space between two entries of the same section.
 \newcommand{\entrygap}{\vspace{3pt}}
@@ -139,13 +139,20 @@
 
 \heading{Projects}
 \begin{resbody}
-  \entry{\href{https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed}{SNU AI Challenge 2026: Storyline Frame Ordering}}{Jul 2026 - Aug 2026}
+  \entry{\href{https://github.com/Birmjune/SNU_AI_Challenge_2026_DeepRed}{SNU AI Challenge 2026: Storyline Frame Ordering}}{Jul 2026 - Aug 2026}
   \begin{points}
     \item Given a caption describing a storyline and four shuffled frames from that story,
       predict each frame's position in the correct temporal order.
     \item One of 12 finalist teams out of 206.
   \end{points}
 
+  \entrygap
+  \entry{\href{https://github.com/Birmjune/swpp202601-team15}{LLVM Optimization for a Custom Target Machine}}{May 2026 - Jun 2026}
+  \begin{points}
+    \item An LLVM IR optimization pipeline for a custom target machine, with custom arithmetic,
+      memory, and loop passes ahead of a provided backend.
+    \item 6th of 24 teams in the course competition.
+  \end{points}
   \entrygap
   \entry{\href{https://github.com/Birmjune/Image2Answer-4optionMCQ}{Image2Answer: 4-Option MCQ Solver}}{Aug 2025}
   \begin{points}
@@ -170,10 +177,20 @@
       for grids up to $10 \times 10$.
     \item Private score 63/100.
   \end{points}
+  \entrygap
+  \entry{\href{https://github.com/Birmjune/RISC-V_BluespecVerilog}{RISC-V CPU in Bluespec}}{Mar 2025 - Jun 2025}
+  \begin{points}
+    \item RISC-V processors in Bluespec SystemVerilog, from a four-cycle non-pipelined CPU to
+      three- and five-stage pipelines and a cached three-stage design.
+    \item Control hazards handled with epochs; data hazards with a scoreboard and with forwarding.
+  \end{points}
 \end{resbody}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Honors and awards %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Two pages since Sep 2026. Break here so Honors and Skills stay together on
+% page 2 instead of Honors splitting across the fold.
+\pagebreak
 \heading{Honors and Awards}
 \begin{resbody}
   \award{One of 23 finalist teams (1,603 teams), NEXON Young Programmers Cup (NYPC) 2026, Master track}{2026}
@@ -198,7 +215,7 @@
 
 \vfill
 \begin{center}
-  {\small Last updated: August 30, 2026}
+  {\small Last updated: September 10, 2026}
 \end{center}
 
 \end{document}
