@@ -35,9 +35,10 @@ table {
   }
 }
 
-// Markdown tables in page and project bodies. The base rule above only sets
-// padding, which leaves a kramdown table looking like loose columns of text.
-.post article table {
+// Opt-in styling for a markdown table: add `{: .md-table}` on the line after
+// it. Not applied to every table, since the theme's own layouts (the News
+// list, for one) also use <table>.
+.post article table.md-table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0 1.5rem;

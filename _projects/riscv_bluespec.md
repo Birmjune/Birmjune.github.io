@@ -35,6 +35,7 @@ The processor labs then work through three designs:
 | Three-stage pipeline | Handling control hazards using epochs |
 | Five-stage pipeline with a scoreboard | Tracking dependencies to handle data hazards |
 | Five-stage pipeline with forwarding | Passing results to dependent instructions before register writeback |
+{: .md-table}
 
 **Control hazards.** A branch can invalidate instructions already in flight. The epoch-based designs distinguish instructions belonging to the current execution path from those that have to be discarded.
 
