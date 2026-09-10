@@ -35,6 +35,28 @@ table {
   }
 }
 
+// Markdown tables in page and project bodies. The base rule above only sets
+// padding, which leaves a kramdown table looking like loose columns of text.
+.post article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+
+  th,
+  td {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--global-divider-color);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.45;
+  }
+
+  th {
+    background-color: var(--global-card-bg-color);
+    font-weight: 600;
+  }
+}
+
 a,
 table.table a {
   color: var(--global-theme-color);
