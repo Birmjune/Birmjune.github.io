@@ -9,9 +9,9 @@ nav_order: 2
 
 <p>
   I'm an undergraduate getting started in research. I'm interested in
-  <strong>making efficient AI models</strong> across various levels of the stack:
-  inference-time methods, model compression and quantization, AI compilers, and
-  hardware acceleration. I'm also interested in <strong>putting those efficient models to work
+  <strong>making AI more efficient</strong> through inference-time algorithms,
+  model compression and quantization, and hardware–software co-design, from
+  compilers to accelerators. I'm also interested in <strong>putting those efficient models to work
   in the physical world</strong>, like robotics, where latency, memory, and power are
   real constraints.
 </p>

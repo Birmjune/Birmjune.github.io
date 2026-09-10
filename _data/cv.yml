@@ -26,9 +26,9 @@
   label: Interests
   type: nested_list
   contents:
-    - title: Efficient AI
+    - title: Efficient AI Systems
       items:
-        - "Making efficient AI models across various levels of the stack: inference-time methods, model compression and quantization, AI compilers, and hardware acceleration."
+        - "Making AI more efficient through inference-time algorithms, model compression and quantization, and hardware–software co-design, from compilers to accelerators."
     - title: AI in the Physical World
       items:
         - Putting those efficient models to work in the physical world (like robotics), where latency, memory, and power are real constraints.
