@@ -47,7 +47,7 @@
   label: Selected work
   type: time_table
   contents:
-    - title: '<a href="https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed">SNU AI Challenge 2026: Storyline Frame Ordering</a>'
+    - title: '<a href="https://github.com/Birmjune/SNU_AI_Challenge_2026_DeepRed">SNU AI Challenge 2026: Storyline Frame Ordering</a>'
       year: Jul 2026 - Aug 2026
       description:
         - Given a caption describing a storyline and four shuffled frames from that story, predict each frame's position in the correct temporal order.

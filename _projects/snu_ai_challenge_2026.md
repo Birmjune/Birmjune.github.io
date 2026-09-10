@@ -5,7 +5,7 @@ description: Reordering shuffled story frames to match a natural-language captio
 img: assets/img/projects/snu-ai-challenge-task.png
 importance: 1
 category: vision-language
-github: https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed
+github: https://github.com/Birmjune/SNU_AI_Challenge_2026_DeepRed
 ---
 
 Team **DeepRed**'s entry to the [SNU AI Challenge 2026](https://snuaichallenge.github.io/),
@@ -70,4 +70,4 @@ SHA256-verified adapter releases, and a `verify_package.py` that checks manifest
 integrity, label-coordinate consistency, split hygiene, and
 weight identity before any GPU time is spent.
 
-Code and instructions on [GitHub](https://github.com/Birmjune/2026_SNU_AI_Challenge_DeepRed).
+Code and instructions on [GitHub](https://github.com/Birmjune/SNU_AI_Challenge_2026_DeepRed).

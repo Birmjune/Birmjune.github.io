@@ -8,7 +8,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - Birmjune/2026_SNU_AI_Challenge_DeepRed
+  - Birmjune/SNU_AI_Challenge_2026_DeepRed
   - Birmjune/Easy-ARC-AGI-solver
   - Birmjune/Image2Answer-4optionMCQ
   - CSEneversleep/cns-next
