@@ -2,6 +2,7 @@
 layout: page
 title: LLVM Optimization for a Custom Target Machine
 description: A target-specific LLVM IR optimization pipeline combining custom arithmetic, memory, and loop transformations. 6th of 24 teams.
+img: assets/img/projects/llvm-dragon.png
 importance: 2
 category: systems
 github: https://github.com/Birmjune/swpp202601-team15
@@ -50,3 +51,5 @@ build/swpp-compiler input.ll a.s --verbose
 The optional verbose output exposes IR for inspection. Tests run with `ctest` from the configured build directory.
 
 Code and build instructions on [GitHub](https://github.com/Birmjune/swpp202601-team15). The [optimization pipeline](https://github.com/Birmjune/swpp202601-team15/blob/main/src/lib/opt.cpp) shows the pass composition and ordering.
+
+The LLVM dragon is owned by Apple Inc. and used under its royalty-free license.
